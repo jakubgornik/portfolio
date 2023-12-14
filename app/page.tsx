@@ -1,3 +1,11 @@
+import Navigation from "./content/ui/Navigation";
+import SocialLinks from "./content/ui/SocialLinks";
+
 export default function Home() {
-  return <div></div>;
+  return (
+    <>
+      <Navigation />
+      <SocialLinks />
+    </>
+  );
 }
