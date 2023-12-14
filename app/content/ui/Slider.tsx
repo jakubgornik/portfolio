@@ -1,12 +1,12 @@
 import Container from "@/app/components/Container";
-import NextJs from "@/app/components/svg/technologies/NextjsIcon";
-import ReactJs from "@/app/components/svg/technologies/ReactjsIcon";
-import VueJs from "@/app/components/svg/technologies/VuejsIcon";
-import Javascript from "@/app/components/svg/technologies/JavascriptIcon";
-import TypescriptLogo from "@/app/components/svg/technologies/TypescriptIcon";
-import TailwindLogo from "@/app/components/svg/technologies/TailwindIcon";
-import CssLogo from "@/app/components/svg/technologies/CssIcon";
-import MaterialUiLogo from "@/app/components/svg/technologies/MaterialuiIcon";
+import NextJsIcon from "@/app/components/svg/technologies/NextjsIcon";
+import ReactJsIcon from "@/app/components/svg/technologies/ReactjsIcon";
+import VueJsIcon from "@/app/components/svg/technologies/VuejsIcon";
+import JavascriptIcon from "@/app/components/svg/technologies/JavascriptIcon";
+import TypescriptIcon from "@/app/components/svg/technologies/TypescriptIcon";
+import TailwindIcon from "@/app/components/svg/technologies/TailwindIcon";
+import CssIcon from "@/app/components/svg/technologies/CssIcon";
+import MaterialUiIcon from "@/app/components/svg/technologies/MaterialuiIcon";
 import GitIcon from "@/app/components/svg/technologies/GitIcon";
 import FirebaseIcon from "@/app/components/svg/technologies/FirebaseIcon";
 import FigmaIcon from "@/app/components/svg/technologies/FigmaIcon";
@@ -17,14 +17,14 @@ const Slider = () => {
     <div className="bg-darkerPurple shadow-lg">
       <Container>
         <div className="bg-darkerPurple flex h-[100px] items-center justify-between">
-          <NextJs />
-          <ReactJs />
-          <VueJs />
-          <Javascript />
-          <TypescriptLogo />
-          <TailwindLogo />
-          <MaterialUiLogo />
-          <CssLogo />
+          <NextJsIcon />
+          <ReactJsIcon />
+          <VueJsIcon />
+          <JavascriptIcon />
+          <TypescriptIcon />
+          <TailwindIcon />
+          <MaterialUiIcon />
+          <CssIcon />
           <HtmlIcon />
           <GitIcon />
           <FirebaseIcon />
