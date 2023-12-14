@@ -19,7 +19,8 @@ const config: Config = {
       },
     },
     screens: {
-      mobile: "320px",
+      mobile: "300px",
+      "mobile-lg": "420px",
       sm: "640px",
       md: "768px",
       lg: "1024px",

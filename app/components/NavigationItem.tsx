@@ -2,7 +2,7 @@ import React from "react";
 
 const NavigationItem = ({ navigationName }: { navigationName: string }) => {
   return (
-    <li className="text-yellowishWhite cursor-pointer px-1 py-4 duration-300">
+    <li className="cursor-pointer px-2 py-4 text-yellowishWhite duration-300">
       {navigationName}
     </li>
   );

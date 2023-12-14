@@ -1,12 +1,13 @@
 import NavigationItem from "../../components/NavigationItem";
 import ButtonResume from "./ButtonResume";
+import Container from "@/app/components/Container";
 
 const Navigation = () => {
   return (
-    <div className="fixed z-50 mt-8 flex w-full items-center justify-center font-medium">
-      <ul className="bg-lighterPurple flex w-[65vw] justify-around rounded-xl px-2 text-[14px] shadow-lg">
+    <div className="fixed z-50 mt-8 hidden w-full items-center justify-center font-medium sm:flex">
+      <ul className="flex justify-around rounded-xl bg-lighterPurple px-2 text-[14px] shadow-lg">
         <NavigationItem navigationName="Home" />
-        <NavigationItem navigationName="About me" />
+        <NavigationItem navigationName="About" />
         <NavigationItem navigationName="Tech stack" />
         <NavigationItem navigationName="Experience" />
         <NavigationItem navigationName="Projects" />
