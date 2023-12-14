@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const LinkedIn = () => {
+const LinkedinIcon = () => {
   return (
     <Link target="_blank" href="https://www.linkedin.com/in/jakub-gornik/">
       <svg
@@ -15,4 +15,4 @@ const LinkedIn = () => {
   );
 };
 
-export default LinkedIn;
+export default LinkedinIcon;

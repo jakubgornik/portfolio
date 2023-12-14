@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const GitHub = () => {
+const GithubIcon = () => {
   return (
     <Link target="_blank" href="https://github.com/jakubgornik">
       <svg
@@ -15,4 +15,4 @@ const GitHub = () => {
   );
 };
 
-export default GitHub;
+export default GithubIcon;

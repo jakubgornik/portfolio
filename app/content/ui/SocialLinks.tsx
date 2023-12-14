@@ -1,5 +1,5 @@
-import LinkedIn from "@/app/components/svg/LinkedIn";
-import GitHub from "@/app/components/svg/GitHub";
+import LinkedIn from "@/app/components/svg/LinkedinIcon";
+import GitHub from "@/app/components/svg/GithubIcon";
 
 const SocialLinks = () => {
   return (
