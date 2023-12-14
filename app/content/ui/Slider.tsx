@@ -11,10 +11,10 @@ import GitIcon from "@/app/components/svg/technologies/GitIcon";
 import FirebaseIcon from "@/app/components/svg/technologies/FirebaseIcon";
 import FigmaIcon from "@/app/components/svg/technologies/FigmaIcon";
 import HtmlIcon from "@/app/components/svg/technologies/HtmlIcon";
-
+// todo: slider infinite animation
 const Slider = () => {
   return (
-    <div className="bg-darkerPurple shadow-lg">
+    <div className="bg-darkerPurple mt-24 shadow-lg">
       <Container>
         <div className="bg-darkerPurple flex h-[100px] items-center justify-between">
           <NextJsIcon />
