@@ -4,7 +4,7 @@ const GitHub = () => {
   return (
     <Link target="_blank" href="https://github.com/jakubgornik">
       <svg
-        className="fill-lightPink hover:fill-yellowishWhite group fixed bottom-[95px] left-[16px] h-[34.4px] w-[34.4px] cursor-pointer duration-300"
+        className="group fixed bottom-[95px] left-[16px] h-[34.4px] w-[34.4px] cursor-pointer fill-lightPink duration-300 hover:fill-yellowishWhite"
         stroke-width="0"
         viewBox="0 0 448 512"
         xmlns="http://www.w3.org/2000/svg"

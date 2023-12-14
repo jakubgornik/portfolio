@@ -4,7 +4,7 @@ const LinkedIn = () => {
   return (
     <Link target="_blank" href="https://www.linkedin.com/in/jakub-gornik/">
       <svg
-        className="fill-lightPink hover:fill-yellowishWhite group fixed bottom-[55px] left-[18px] h-[30px] w-[30px] cursor-pointer duration-300"
+        className="group fixed bottom-[55px] left-[18px] h-[30px] w-[30px] cursor-pointer fill-lightPink duration-300 hover:fill-yellowishWhite"
         stroke-width="0"
         viewBox="0 0 16 16"
         xmlns="http://www.w3.org/2000/svg"

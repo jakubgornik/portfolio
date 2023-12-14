@@ -3,11 +3,11 @@ import GitHub from "@/app/components/svg/GitHub";
 
 const SocialLinks = () => {
   return (
-    <>
+    <div className="hidden sm:block">
       <GitHub />
       <LinkedIn />
-      <div className="bg-lightPink fixed bottom-0 left-8 h-[45px] w-[1px]"></div>
-    </>
+      <div className="fixed bottom-0 left-8 h-[45px] w-[1px] bg-lightPink"></div>
+    </div>
   );
 };
 
