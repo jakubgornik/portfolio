@@ -6,7 +6,7 @@ const SectionHeader = ({ index, title }: { index: string; title: string }) => {
       <span className="text-lightPink ">{index}.</span>
       <h3 className="text-yellowishWhite">{title}</h3>
       <div className="relative self-end">
-        <div className="mobile-lg:w-[80px] absolute bottom-3 h-[1px] w-[30px] bg-lightGray sm:w-[140px] md:w-[200px]"></div>
+        <div className="mobile-lg:w-[60px] absolute bottom-3 h-[1px] w-[30px] bg-lightGray sm:w-[80px] md:w-[100px]"></div>
       </div>
     </div>
   );

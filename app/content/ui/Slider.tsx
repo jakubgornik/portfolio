@@ -14,9 +14,9 @@ import HtmlIcon from "@/app/components/svg/technologies/HtmlIcon";
 // todo: slider infinite animation
 const Slider = () => {
   return (
-    <div className="bg-darkerPurple mt-24 shadow-lg">
+    <div className="bg-purple mt-24 shadow-lg">
       <Container>
-        <div className="bg-darkerPurple flex h-[100px] items-center justify-between">
+        <div className="flex h-[100px] items-center justify-between">
           <NextJsIcon />
           <ReactJsIcon />
           <VueJsIcon />

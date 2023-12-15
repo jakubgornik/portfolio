@@ -10,9 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        darkerPurple: "#161626",
-        darkPurple: "#23223F",
         lighterPurple: "#2B2A48",
+        purple: "#1B1B30",
+        darkPurple: "#23223F",
+        darkerPurple: "#161626",
         yellowishWhite: "#F0ECE5",
         grayishWhite: "#C8CCD6",
         lightPink: "#ED9ED6",

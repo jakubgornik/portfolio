@@ -3,6 +3,7 @@ import SocialLinks from "./content/ui/SocialLinks";
 import AboutMeSection from "./content/AboutMeSection";
 import HomeSection from "./content/HomeSection";
 import TechStackSection from "./content/TechStackSection";
+import ContactSection from "./content/ContactSection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <HomeSection />
       <AboutMeSection />
       <TechStackSection />
+      <ContactSection />
       <SocialLinks />
     </>
   );
