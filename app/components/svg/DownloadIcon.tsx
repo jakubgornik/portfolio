@@ -1,7 +1,7 @@
 const DownloadIcon = () => {
   return (
     <svg
-      stroke-width="0"
+      strokeWidth="0"
       viewBox="0 0 20 20"
       className="fill-darkerPurple"
       height={15}

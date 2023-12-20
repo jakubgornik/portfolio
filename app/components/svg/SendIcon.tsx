@@ -4,7 +4,7 @@ const SendIcon = () => {
   return (
     <svg
       className="fill-purple"
-      stroke-width="0"
+      strokeWidth="0"
       width={15}
       height={15}
       viewBox="0 0 512 512"

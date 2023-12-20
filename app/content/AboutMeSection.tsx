@@ -1,11 +1,20 @@
+"use client";
+
 import SectionHeader from "../components/SectionHeader";
 import SectionDescription from "../components/SectionDescription";
 import Container from "../components/Container";
+import { useSectionInView } from "../hooks/useSectionInView";
 
 const AboutMeSection = () => {
+  const { ref } = useSectionInView("About");
+
   return (
     <Container>
-      <div className="mobile-lg:pt-0 flex flex-col gap-3 pt-36">
+      <div
+        id="about"
+        ref={ref}
+        className="flex scroll-mt-6 flex-col gap-3 pt-52 mobile-lg:pt-0"
+      >
         <SectionHeader index="01" title="Who am I" />
         <SectionDescription>
           Based in Poland self-taught developer,{" "}

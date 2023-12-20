@@ -3,13 +3,13 @@ import ButtonSubmit from "./ButtonSubmit";
 
 const ContactForm = () => {
   return (
-    <div className="bg-purple flex w-full flex-col items-center rounded-[5px] py-12 shadow-lg sm:w-1/2">
+    <div className="flex w-full flex-col items-center rounded-[5px] bg-purple py-12 shadow-lg sm:w-1/2">
       <p className="pb-2 text-[22px] text-yellowishWhite sm:text-[32px]">
         Contact form
       </p>
       <form
         action="submit"
-        className="mobile-lg:text-base flex w-full flex-col items-center gap-5 text-[12px]"
+        className="flex w-full flex-col items-center gap-5 text-[12px] mobile-lg:text-base"
       >
         <div className="flex w-[80%] flex-col gap-1 px-4">
           <label
@@ -19,7 +19,7 @@ const ContactForm = () => {
             Your full name
           </label>
           <input
-            className="text-darkerPurple h-[30px] w-full rounded-[5px] bg-yellowishWhite px-2 font-semibold focus-within:outline-none"
+            className="h-[30px] w-full rounded-[5px] bg-grayishWhite px-2 font-semibold text-darkerPurple focus-within:outline-none"
             type="text"
             name="name"
             id="name"
@@ -33,7 +33,7 @@ const ContactForm = () => {
             Your email addres
           </label>
           <input
-            className="text-darkerPurple h-[30px] w-full rounded-[5px] bg-yellowishWhite px-2 font-semibold focus-within:outline-none"
+            className="h-[30px] w-full rounded-[5px] bg-grayishWhite px-2 font-semibold text-darkerPurple focus-within:outline-none"
             type="email"
             name="email"
             id="email"
@@ -47,13 +47,13 @@ const ContactForm = () => {
             Message subject
           </label>
           <input
-            className="text-darkerPurple h-[30px] w-full rounded-[5px] bg-yellowishWhite px-2 font-semibold focus-within:outline-none"
+            className="h-[30px] w-full rounded-[5px] bg-grayishWhite px-2 font-semibold text-darkerPurple focus-within:outline-none"
             type="text"
             name="subject"
             id="subject"
           />
         </div>
-        <div className="flex w-[80%] flex-col gap-2 px-4">
+        <div className="flex w-[80%] flex-col gap-1 px-4">
           <label
             className="pointer-events-none text-yellowishWhite"
             htmlFor="message"
@@ -61,7 +61,7 @@ const ContactForm = () => {
             Your message
           </label>
           <textarea
-            className="text-darkerPurple mb-4 max-h-[120px] rounded-[5px] bg-yellowishWhite px-2 py-1 font-semibold focus-within:outline-none"
+            className="mb-4 max-h-[120px] rounded-[5px] bg-grayishWhite px-2 py-1 font-semibold text-darkerPurple focus-within:outline-none"
             name="message"
             id="message"
             cols={30}

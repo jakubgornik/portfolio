@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow } from "next/font/google";
+import ActiveSectionContextProvider from "./context/ActiveContextSection";
 import "./globals.css";
 
 const barlow = Barlow({
@@ -18,8 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={barlow.className}>{children}</body>
+    <html lang="en" className="!scroll-smooth">
+      <body className={barlow.className}>
+        <ActiveSectionContextProvider>{children}</ActiveSectionContextProvider>
+      </body>
     </html>
   );
 }

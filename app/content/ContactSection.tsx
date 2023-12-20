@@ -1,12 +1,20 @@
+"use client";
 import SectionHeader from "../components/SectionHeader";
 import SectionDescription from "../components/SectionDescription";
 import Container from "../components/Container";
 import ContactForm from "./ui/ContactForm";
+import { useSectionInView } from "../hooks/useSectionInView";
 
 const ContactSection = () => {
+  const { ref } = useSectionInView("Contact");
+
   return (
     <Container>
-      <div className="flex flex-col gap-24 pb-12 pt-36 sm:flex-row sm:gap-6">
+      <div
+        id="contact"
+        ref={ref}
+        className="flex scroll-mt-6 flex-col gap-24 pb-12 pt-52 sm:flex-row sm:gap-6"
+      >
         <div className="flex w-full flex-col gap-3 sm:w-1/2">
           <SectionHeader index="06" title="Contact" />
           <SectionDescription>
