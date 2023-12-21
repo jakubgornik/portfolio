@@ -3,7 +3,7 @@ import React from "react";
 const HtmlIcon = () => {
   return (
     <svg
-      className="h-[45px] w-[50px] fill-lightPink"
+      className="h-[35px] w-[30px] fill-lightPink md:h-[45px] md:w-[50px]"
       viewBox="0 0 20 20"
       xmlns="http://www.w3.org/2000/svg"
     >

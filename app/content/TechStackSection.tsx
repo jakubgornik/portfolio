@@ -42,13 +42,12 @@ const TechStackSection = () => {
           <h4 className="flex gap-2 text-[22px] text-yellowishWhite sm:text-[32px]">
             My skills
           </h4>
-          <div className="flex max-w-[800px] flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-2 md:max-w-[800px]">
             {technologiesAndTools.map((title, index) => (
               <TechnologyCard key={index} index={index} title={title} />
             ))}
           </div>
         </div>
-        <div className="my-12"></div>
       </Container>
       <Slider />
     </>

@@ -2,7 +2,10 @@ import React from "react";
 
 const FigmaIcon = () => {
   return (
-    <svg className="h-[45px] w-[50px] fill-lightPink" viewBox="-4 0 23 23">
+    <svg
+      className="h-[35px] w-[35px] fill-lightPink md:h-[45px] md:w-[50px]"
+      viewBox="-4 0 23 23"
+    >
       <path d="M7 0H3.5C1.567 0 0 1.567 0 3.5C0 5.433 1.567 7 3.5 7H7V0z" />
       <path d="M8 0H11.5C13.433 0 15 1.567 15 3.5C15 5.433 13.433 7 11.5 7H8V0z" />
       <path d="M7 8H3.5C1.567 8 0 9.567 0 11.5C0 13.433 1.567 15 3.5 15H7V8z" />
