@@ -2,8 +2,8 @@
 import SectionHeader from "../components/SectionHeader";
 import SectionDescription from "../components/SectionDescription";
 import Container from "../components/Container";
-import ContactForm from "./ui/ContactForm";
 import { useSectionInView } from "../hooks/useSectionInView";
+import ButtonContact from "./ui/ButtonContact";
 
 const ContactSection = () => {
   const { ref } = useSectionInView("Contact");
@@ -24,13 +24,10 @@ const ContactSection = () => {
           </SectionDescription>
           <SectionDescription>
             I`m currently looking for new opportunities so my inbox is always
-            open. You can send me message with form or just leave an email.
+            open. You can send me an email using button below
           </SectionDescription>
-          <SectionDescription>
-            I hope you enjoyed browsing through this portfolio.
-          </SectionDescription>
+          <ButtonContact />
         </div>
-        <ContactForm />
       </div>
     </Container>
   );

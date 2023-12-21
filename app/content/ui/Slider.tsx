@@ -11,7 +11,7 @@ import GitIcon from "@/app/components/svg/technologies/GitIcon";
 import FirebaseIcon from "@/app/components/svg/technologies/FirebaseIcon";
 import FigmaIcon from "@/app/components/svg/technologies/FigmaIcon";
 import HtmlIcon from "@/app/components/svg/technologies/HtmlIcon";
-// todo: slider infinite animation
+
 const Slider = () => {
   return (
     <div className="mt-36 bg-purple shadow-lg">

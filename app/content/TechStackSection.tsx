@@ -48,6 +48,7 @@ const TechStackSection = () => {
             ))}
           </div>
         </div>
+        <div className="my-12"></div>
       </Container>
       <Slider />
     </>
