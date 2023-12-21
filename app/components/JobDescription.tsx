@@ -1,5 +1,3 @@
-import React from "react";
-
 const JobDescription = ({
   ocupation,
   timeRange,
@@ -14,7 +12,7 @@ const JobDescription = ({
   return (
     <div className="flex max-w-[18rem] flex-col gap-2 mobile-lg:max-w-[20rem] md:max-w-[22rem] lg:max-w-[28rem]">
       <span className="text-yellowishWhite mobile-lg:text-[16px] sm:text-[18px]">
-        {ocupation}{" "}
+        {ocupation} at{" "}
         <span className="font-medium text-lightPink">{company}</span>
       </span>
       <p className="text-[13px] text-lightPink mobile-lg:text-[14px] sm:text-[16px]">

@@ -1,5 +1,5 @@
 "use client";
-import JobsMenu from "../components/JobsMenu";
+import JobsMenu from "./ui/JobsMenu";
 import Container from "../components/Container";
 import SectionHeader from "../components/SectionHeader";
 import { useSectionInView } from "../hooks/useSectionInView";

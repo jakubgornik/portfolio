@@ -44,7 +44,7 @@ const TechStackSection = () => {
           </h4>
           <div className="flex max-w-[800px] flex-wrap justify-center gap-2">
             {technologiesAndTools.map((title, index) => (
-              <TechnologyCard key={index} title={title} />
+              <TechnologyCard key={index} index={index} title={title} />
             ))}
           </div>
         </div>
