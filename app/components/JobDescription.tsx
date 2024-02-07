@@ -10,7 +10,7 @@ const JobDescription = ({
   jobDescription: string[];
 }) => {
   return (
-    <div className="flex max-w-[18rem] flex-col gap-2 mobile-lg:max-w-[20rem] md:max-w-[22rem] lg:max-w-[28rem]">
+    <div className="flex max-w-[20rem] flex-col gap-2 mobile-lg:max-w-[28rem] sm:max-w-[26rem] md:max-w-[19rem] lg:max-w-[28rem]">
       <span className="text-yellowishWhite mobile-lg:text-[16px] sm:text-[18px]">
         {ocupation} at{" "}
         <span className="font-medium text-lightPink">{company}</span>

@@ -21,8 +21,8 @@ const AboutMeSection = () => {
           <span className="text-lightPink">
             with nearly 2 years experience,{" "}
           </span>
-          highly motivated to develop modern and useful applications. That`s how
-          i would briefly describe myself.
+          developing modern and useful applications. That`s how i would briefly
+          describe myself.
         </SectionDescription>
         <SectionDescription>
           My journey with creating web applications started at the university
