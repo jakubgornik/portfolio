@@ -27,7 +27,7 @@ export const navigationLinks = [
 
 export type SectionNames = (typeof navigationLinks)[number]["name"];
 
-export const MachinesManagerTech = [
+export const machinesManagerTech = [
   "Typescript",
   "React.js",
   "Next.js",
@@ -35,7 +35,7 @@ export const MachinesManagerTech = [
   "Auth.js",
   "Firebase",
 ];
-export const EasyBankTech = [
+export const easyBankTech = [
   "Typescript",
   "React.js",
   "Next.js",
@@ -82,4 +82,16 @@ export const jobs = [
       "Everytown for Gun Safety, Pratt Institute, KoalaHealth, Vanderbilt University, The 19th News, and more",
     ],
   },
+];
+
+export const machinesManagerDesc = [
+  "Machines Manager",
+  "Web application for machines management",
+  "This web application provides many functionalities that aims to improve the processes of managing machines and scheduling. Application allows to add, delete and modify machines, set statuses and monitor them thanks to implemented table. Moreover registered user can use based on statuses calcualted statistics",
+];
+
+export const easyBankDesc = [
+  "EasyBank",
+  "Modern single page application",
+  "EasyBank is a website built and designed from scratch, that is fully responsive, user friendly and has many eye-catching animations that makes browsing through application as smooth as possible",
 ];
