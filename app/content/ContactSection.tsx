@@ -13,7 +13,7 @@ const ContactSection = () => {
       <div
         id="contact"
         ref={ref}
-        className="flex scroll-mt-6 flex-col gap-24 pb-12 pt-52 sm:flex-row sm:gap-6"
+        className="flex scroll-mt-6 flex-col gap-24 py-52 sm:flex-row sm:gap-6"
       >
         <div className="flex flex-col gap-3">
           <SectionHeader index="06" title="Contact" />

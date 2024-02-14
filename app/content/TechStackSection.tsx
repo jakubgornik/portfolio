@@ -8,7 +8,7 @@ import { useSectionInView } from "../hooks/useSectionInView";
 import { technologiesAndTools } from "../utils/data";
 
 const TechStackSection = () => {
-  const { ref } = useSectionInView("Techstack");
+  const { ref } = useSectionInView("Tech stack");
 
   return (
     <>
@@ -38,15 +38,20 @@ const TechStackSection = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-6 pt-36">
+        <div className="flex flex-col items-center gap-6 py-36">
           <h4 className="flex gap-2 text-[22px] text-yellowishWhite sm:text-[32px]">
-            My skills
+            My technology stack
           </h4>
-          <div className="flex flex-wrap justify-center gap-2 md:max-w-[800px]">
+          <ul className="flex flex-wrap justify-center gap-2 md:max-w-[800px]">
             {technologiesAndTools.map((title, index) => (
-              <TechnologyCard key={index} index={index} title={title} />
+              <TechnologyCard
+                key={index}
+                index={index}
+                title={title}
+                variant=""
+              />
             ))}
-          </div>
+          </ul>
         </div>
       </Container>
       <Slider />

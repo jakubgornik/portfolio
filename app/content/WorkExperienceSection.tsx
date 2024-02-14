@@ -16,10 +16,10 @@ const WorkExperienceSection = () => {
         <div
           id="experience"
           ref={ref}
-          className="flex scroll-mt-6 flex-col pt-52"
+          className="flex scroll-mt-6 flex-col items-end pt-52"
         >
           <div className="flex flex-col gap-6 md:gap-3">
-            <SectionHeader index="04" title="Experience" />
+            <SectionHeader index="05" title="Experience" />
             <div className="flex flex-col gap-12 md:flex-row">
               <JobsMenu liftActiveJob={setActiveJob} />
               {activeJob === "Euvic" ? (

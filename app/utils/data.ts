@@ -8,16 +8,16 @@ export const navigationLinks = [
     id: "#about",
   },
   {
-    name: "Techstack",
+    name: "Tech stack",
     id: "#techstack",
-  },
-  {
-    name: "Experience",
-    id: "#experience",
   },
   {
     name: "Projects",
     id: "#projects",
+  },
+  {
+    name: "Experience",
+    id: "#experience",
   },
   {
     name: "Contact",
@@ -27,16 +27,32 @@ export const navigationLinks = [
 
 export type SectionNames = (typeof navigationLinks)[number]["name"];
 
+export const MachinesManagerTech = [
+  "Typescript",
+  "React.js",
+  "Next.js",
+  "TailwindCSS",
+  "Auth.js",
+  "Firebase",
+];
+export const EasyBankTech = [
+  "Typescript",
+  "React.js",
+  "Next.js",
+  "TailwindCSS",
+];
+
 export const technologiesAndTools = [
   "Javascript",
   "Typescript",
   "React.js",
   "Next.js",
+  "Node.js",
   "TailwindCSS",
   "MaterialUi",
   "Html",
   "Git",
-  "Css ( Scss )",
+  "CSS(SCSS)",
   "Figma",
   "Jira",
   "Firebase",
