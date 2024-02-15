@@ -5,7 +5,7 @@ import ButtonResume from "./ui/ButtonResume";
 import { navigationLinks } from "@/app/utils/data";
 import HamburgerMenu from "./ui/HamburgerMenu";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navigation = () => {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
@@ -45,19 +45,37 @@ const Navigation = () => {
       </nav>
 
       {/* mobile */}
-      <nav className="fixed z-[50] flex w-full items-center justify-between border-b border-b-purple px-[2rem] shadow-lg backdrop-blur-lg sm:hidden sm:px-[2rem] md:px-[3rem] lg:px-[4rem]">
-        <span className="cursor-pointer py-5 text-[28px] font-bold text-yellowishWhite duration-300 hover:text-lightPink">
+      <nav className="fixed z-[999] flex w-full items-center justify-between border-b border-b-purple bg-lighterPurple px-[2rem] py-5 shadow-lg backdrop-blur-lg sm:hidden sm:px-[2rem] md:px-[3rem] lg:px-[4rem]">
+        <span className="cursor-pointer  text-[28px] font-bold text-yellowishWhite duration-300 hover:text-lightPink">
           Portfolio.
         </span>
         <div onClick={mobileViewHandler} className="cursor-pointer">
           <HamburgerMenu animation={animation} />
         </div>
       </nav>
+
+      <AnimatePresence>
+        {isMobileMenuActive && (
+          <motion.div
+            key="aide-menu"
+            id="aside-menu"
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ ease: "easeInOut", duration: 0.2 }}
+            className="fixed right-0 top-0 z-[100] h-screen w-[55%] border-l border-l-purple bg-lighterPurple shadow-lg backdrop-blur-lg sm:hidden"
+          >
+            <ul></ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {isMobileMenuActive && (
-        <div
+        <motion.div
+          key="overlay"
           id="overlay"
           onClick={mobileViewHandler}
-          className="fixed top-20 z-[100] h-full w-full bg-purple/80 backdrop-blur-sm"
+          className="fixed left-0 top-0 z-[99] h-screen w-screen cursor-pointer bg-purple/80 backdrop-blur-sm sm:hidden"
         />
       )}
     </>
