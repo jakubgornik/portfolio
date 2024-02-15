@@ -6,6 +6,8 @@ import { navigationLinks } from "@/app/utils/data";
 import HamburgerMenu from "./ui/HamburgerMenu";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import GithubIcon from "../components/svg/GithubIcon";
+import LinkedinIcon from "../components/svg/LinkedinIcon";
 
 const Navigation = () => {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
@@ -67,16 +69,25 @@ const Navigation = () => {
             transition={{ ease: "easeInOut", duration: 0.2 }}
             className="fixed right-0 top-0 z-[100] h-screen w-[55%] border-l border-l-purple bg-lighterPurple shadow-lg backdrop-blur-lg sm:hidden"
           >
-            <ul className="flex h-full w-full flex-col items-center justify-center gap-4">
-              {navigationLinks.map((el, index) => (
-                <NavigationItem
-                  variant="mobile"
-                  key={el.id}
-                  navigationElement={el}
-                  index={index + 1}
-                />
-              ))}
-            </ul>
+            <div className="flex h-full w-full flex-col items-center justify-center gap-12">
+              <ul className="flex flex-col gap-4">
+                {navigationLinks.map((el, index) => (
+                  <NavigationItem
+                    variant="mobile"
+                    key={el.id}
+                    navigationElement={el}
+                    index={index + 1}
+                  />
+                ))}
+              </ul>
+              <div className="flex flex-col items-center gap-8">
+                <ButtonResume />
+                <div className="flex items-center gap-4">
+                  <GithubIcon />
+                  <LinkedinIcon />
+                </div>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
