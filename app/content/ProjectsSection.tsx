@@ -20,12 +20,8 @@ const ProjectsSection = () => {
   return (
     <>
       <Container>
-        <div
-          id="projects"
-          ref={ref}
-          className="flex scroll-mt-6 flex-col pt-52"
-        >
-          <SectionHeader index="04" title="Projects" />
+        <div id="projects" ref={ref} className="flex flex-col pt-52">
+          <SectionHeader index="04" title="My personal projects" />
           <ul className="hidden flex-col gap-12 pt-3 md:flex lg:gap-24 xl:gap-32">
             <ProjectPresentation
               img={imageP1}
