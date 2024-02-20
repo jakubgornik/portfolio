@@ -9,10 +9,12 @@ const NavigationItem = ({
   navigationElement,
   variant,
   index,
+  closeMobileMenu,
 }: {
   navigationElement: { name: SectionNames; id: string };
   variant: string;
   index?: number;
+  closeMobileMenu?: () => void;
 }) => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
@@ -51,12 +53,15 @@ const NavigationItem = ({
           </Link>
         </motion.li>
       ) : (
-        <Link className="group" href={navigationElement.id}>
-          <li className="w-[120px] px-3 text-yellowishWhite group-hover:text-lightPink">
+        <li
+          onClick={() => closeMobileMenu && closeMobileMenu()}
+          className="w-[120px] px-3 text-yellowishWhite hover:text-lightPink"
+        >
+          <Link href={navigationElement.id}>
             <span className="pr-1 text-lightPink duration-300 ">{index}.</span>
             {navigationElement.name}
-          </li>
-        </Link>
+          </Link>
+        </li>
       )}
     </>
   );

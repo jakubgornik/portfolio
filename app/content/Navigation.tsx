@@ -28,13 +28,25 @@ const Navigation = () => {
       : (document.body.style.overflow = "auto");
   };
 
+  const handleResize = () => {
+    if (window.innerWidth > 640) {
+      document.body.style.overflow = "auto";
+    } else {
+      handleScrollLock();
+    }
+  };
+
   useEffect(() => {
     handleScrollLock();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, [isMobileMenuActive]);
 
   return (
     <>
-      {/* desktop */}
       <nav className="fixed z-[999] mt-8 hidden w-full items-center justify-center font-semibold sm:flex">
         <ul className="flex h-12 items-center justify-around rounded-xl bg-purple/60 px-2 text-[14px] shadow-lg backdrop-blur-lg lg:h-16">
           {navigationLinks.map((el) => (
@@ -48,7 +60,6 @@ const Navigation = () => {
         <ButtonResume />
       </nav>
 
-      {/* mobile */}
       <nav className="fixed z-[999] flex w-full items-center justify-between border-b border-b-purple bg-lighterPurple px-[2rem] py-5 shadow-lg backdrop-blur-lg sm:hidden sm:px-[2rem] md:px-[3rem] lg:px-[4rem]">
         <span className="cursor-pointer text-[28px] font-bold text-yellowishWhite duration-300 hover:text-lightPink">
           Portfolio.
@@ -70,13 +81,16 @@ const Navigation = () => {
             className="fixed right-0 top-0 z-[100] h-screen w-[55%] border-l border-l-purple bg-lighterPurple shadow-lg backdrop-blur-lg sm:hidden"
           >
             <div className="flex h-full w-full flex-col items-center justify-center gap-12">
-              <ul className="flex flex-col gap-4">
+              <ul className="flex max-h-[250px] flex-col gap-4 overflow-y-auto">
                 {navigationLinks.map((el, index) => (
                   <NavigationItem
                     variant="mobile"
                     key={el.id}
                     navigationElement={el}
                     index={index + 1}
+                    closeMobileMenu={() => {
+                      setIsMobileMenuActive((prev) => !prev);
+                    }}
                   />
                 ))}
               </ul>
