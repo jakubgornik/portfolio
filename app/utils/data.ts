@@ -70,8 +70,11 @@ export const jobs = [
     company: "Euvic",
     ocupation: "Frontend developer",
     jobDescription: [
-      "Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, KoalaHealth, Vanderbilt University, The 19th News, and more",
-      "Deliver high-quality, robust production code for a diverse array of projects for clients",
+      "Developing modern web applications using React.js, Next.js and TailwindCSS",
+      "Working within a team of developers, designers and project managers",
+      "Participating in code reviews",
+      "Implementing new features and fixing bugs",
+      "Creating reusable components, hooks and utilities",
     ],
   },
   {
@@ -79,7 +82,10 @@ export const jobs = [
     company: "Webo",
     ocupation: "Frontend developer",
     jobDescription: [
-      "Everytown for Gun Safety, Pratt Institute, KoalaHealth, Vanderbilt University, The 19th News, and more",
+      "Developing modern web applications using Vue.js, Nuxt.js and TailwindCSS",
+      "Responsible for creating modern single page application from scratch, according to provided design",
+      "Implementing new features and fixing bugs",
+      "Creating reusable components, hooks and utilities",
     ],
   },
 ];
