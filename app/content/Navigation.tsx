@@ -60,7 +60,7 @@ const Navigation = () => {
         <ButtonResume />
       </nav>
 
-      <nav className="fixed z-[999] flex w-full items-center justify-between border-b border-b-purple bg-lighterPurple px-[2rem] py-5 shadow-lg backdrop-blur-lg sm:hidden sm:px-[2rem] md:px-[3rem] lg:px-[4rem]">
+      <nav className="fixed z-[999] flex w-full items-center justify-between border-b border-b-purple bg-darkPurple px-[2rem] py-5 shadow-lg backdrop-blur-lg sm:hidden sm:px-[2rem] md:px-[3rem] lg:px-[4rem]">
         <span className="cursor-pointer text-[28px] font-bold text-yellowishWhite duration-300 hover:text-lightPink">
           Portfolio.
         </span>
@@ -78,7 +78,7 @@ const Navigation = () => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ ease: "easeInOut", duration: 0.2 }}
-            className="fixed right-0 top-0 z-[100] h-screen w-[55%] border-l border-l-purple bg-lighterPurple shadow-lg backdrop-blur-lg sm:hidden"
+            className="fixed right-0 top-0 z-[100] h-screen w-[55%] border-l border-l-purple bg-darkPurple shadow-lg backdrop-blur-lg sm:hidden"
           >
             <div className="flex h-full w-full flex-col items-center justify-center gap-12">
               <ul className="flex max-h-[250px] flex-col gap-4 overflow-y-auto">

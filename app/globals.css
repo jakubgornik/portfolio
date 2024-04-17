@@ -3,11 +3,10 @@
 @tailwind utilities;
 
 html {
-  height: 100%;
-}
-
-body {
-  background: #23223f;
+  background-image: url("/img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* min-height: 100%; */
 }
 
 ::-webkit-scrollbar {
@@ -15,7 +14,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #2b2a48;
+  background-color: #23223f;
 }
 
 ::-webkit-scrollbar-thumb {
