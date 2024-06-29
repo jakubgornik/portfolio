@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
 
 export default function useIsWindowWidthLowerThan(isLowerThan: number) {
-  const [isWindowWidthLower, setIsWindowWidthLower] = useState(
-    window.innerWidth < isLowerThan,
-  );
+  const [isWindowWidthLower, setIsWindowWidthLower] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth < isLowerThan;
+    }
+    return false;
+  });
 
   useEffect(() => {
     const onResize = () => {
-      setIsWindowWidthLower(window.innerWidth < isLowerThan);
+      setIsWindowWidthLower(() => window.innerWidth < isLowerThan);
     };
 
     window.addEventListener("resize", onResize);
