@@ -6,14 +6,25 @@ import { useSectionInView } from "../hooks/useSectionInView";
 import JobDescription from "../components/JobDescription";
 import { useState } from "react";
 import { jobs } from "../utils/data";
+import { motion } from "framer-motion";
+import useIsWindowWidthLowerThan from "../hooks/useIsWindowWidthLowerThan";
 
 const WorkExperienceSection = () => {
   const { ref } = useSectionInView("Experience");
   const [activeJob, setActiveJob] = useState("Euvic");
+  const isWindowWidthLower = useIsWindowWidthLowerThan(520);
   return (
     <>
       <Container>
-        <div
+        <motion.div
+          initial={{
+            opacity: 0,
+            x: isWindowWidthLower ? 0 : 20,
+            y: isWindowWidthLower ? 20 : 0,
+          }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
           id="experience"
           ref={ref}
           className="flex scroll-mt-6 flex-col items-end pt-52"
@@ -41,7 +52,7 @@ const WorkExperienceSection = () => {
               )}
             </div>
           </div>
-        </div>
+        </motion.div>
       </Container>
     </>
   );

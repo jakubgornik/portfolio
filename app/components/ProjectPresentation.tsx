@@ -3,7 +3,7 @@ import TechnologyCard from "./TechnologyCard";
 import Link from "next/link";
 import GithubSecondaryIcon from "./svg/GithubSecondaryIcon";
 import LinkIcon from "./svg/LinkIcon";
-import { ReactNode } from "react";
+import { motion } from "framer-motion";
 import { StaticImageData } from "next/image";
 
 const ProjectPresentation = ({
@@ -29,7 +29,13 @@ const ProjectPresentation = ({
           alt={alt}
           className="col-[1/5] row-[1/2] rounded-[3px]"
         />
-        <div className="col-[3/-1] row-[1/2] pt-8">
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="col-[3/-1] row-[1/2] pt-8"
+        >
           <div className="flex flex-col rounded-[3px] bg-purple p-3 shadow-lg xl:p-6">
             <span className="text-[22px] text-lightPink xl:text-[26px]">
               {description[0]}
@@ -61,10 +67,14 @@ const ProjectPresentation = ({
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </li>
 
-      <li className="relative flex md:hidden">
+      <motion.li
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="relative flex md:hidden"
+      >
         <Image
           src={img}
           alt={alt}
@@ -103,7 +113,7 @@ const ProjectPresentation = ({
             </div>
           </div>
         </div>
-      </li>
+      </motion.li>
     </>
   );
 };

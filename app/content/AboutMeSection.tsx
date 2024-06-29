@@ -4,16 +4,26 @@ import SectionHeader from "../components/SectionHeader";
 import SectionDescription from "../components/SectionDescription";
 import Container from "../components/Container";
 import { useSectionInView } from "../hooks/useSectionInView";
+import { motion } from "framer-motion";
+import useIsWindowWidthLowerThan from "../hooks/useIsWindowWidthLowerThan";
 
 const AboutMeSection = () => {
   const { ref } = useSectionInView("About");
-
+  const isWindowWidthLower = useIsWindowWidthLowerThan(520);
   return (
     <Container>
-      <div
+      <motion.div
+        initial={{
+          opacity: 0,
+          x: isWindowWidthLower ? 0 : -20,
+          y: isWindowWidthLower ? 20 : 0,
+        }}
+        whileInView={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         id="about"
         ref={ref}
-        className="flex scroll-mt-6 flex-col gap-3 pt-52 mobile-lg:pt-0"
+        className="mt-52 flex scroll-mt-6 flex-col gap-3 mobile-lg:pt-0"
       >
         <SectionHeader index="01" title="Who am I" />
         <SectionDescription>
@@ -34,7 +44,7 @@ const AboutMeSection = () => {
           worked on numerous projects, both personal and professional and
           participated in a hackathon.
         </SectionDescription>
-      </div>
+      </motion.div>
     </Container>
   );
 };

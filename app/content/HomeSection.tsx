@@ -2,16 +2,27 @@
 import Container from "../components/Container";
 import SectionDescription from "../components/SectionDescription";
 import { useSectionInView } from "../hooks/useSectionInView";
+import { motion } from "framer-motion";
+import useIsWindowWidthLowerThan from "../hooks/useIsWindowWidthLowerThan";
 
 const HomeSection = () => {
   const { ref } = useSectionInView("Home");
+  const isWindowWidthLower = useIsWindowWidthLowerThan(520);
 
   return (
     <Container>
-      <div
+      <motion.div
+        initial={{
+          opacity: 0,
+          x: isWindowWidthLower ? 0 : -20,
+          y: isWindowWidthLower ? 20 : 0,
+        }}
+        whileInView={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         id="home"
         ref={ref}
-        className="flex items-center pt-52 mobile-lg:h-screen mobile-lg:pt-0"
+        className="flex items-center pt-72 "
       >
         <div className="flex flex-col">
           <p className="first-letter text-sm text-lightPink mobile-lg:text-lg sm:text-xl lg:text-2xl">
@@ -31,7 +42,7 @@ const HomeSection = () => {
             <span className="text-lightPink">web applications.</span>
           </SectionDescription>
         </div>
-      </div>
+      </motion.div>
     </Container>
   );
 };

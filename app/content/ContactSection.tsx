@@ -4,13 +4,24 @@ import SectionDescription from "../components/SectionDescription";
 import Container from "../components/Container";
 import { useSectionInView } from "../hooks/useSectionInView";
 import ButtonContact from "./ui/ButtonContact";
+import { motion } from "framer-motion";
+import useIsWindowWidthLowerThan from "../hooks/useIsWindowWidthLowerThan";
 
 const ContactSection = () => {
   const { ref } = useSectionInView("Contact");
+  const isWindowWidthLower = useIsWindowWidthLowerThan(520);
 
   return (
     <Container>
-      <div
+      <motion.div
+        initial={{
+          opacity: 0,
+          x: isWindowWidthLower ? 0 : -20,
+          y: isWindowWidthLower ? 20 : 0,
+        }}
+        whileInView={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         id="contact"
         ref={ref}
         className="flex scroll-mt-6 flex-col gap-24 py-52 sm:flex-row sm:gap-6"
@@ -28,7 +39,7 @@ const ContactSection = () => {
           </SectionDescription>
           <ButtonContact />
         </div>
-      </div>
+      </motion.div>
     </Container>
   );
 };
