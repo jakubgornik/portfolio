@@ -37,8 +37,8 @@ const HomeSection = () => {
           <SectionDescription>
             I am a passionate{" "}
             <span className="text-lightPink">software developer</span> who is
-            not afraid of new challenges, with a passion for creating ( and
-            occasionally designing ) intuitive and eye-catching modern{" "}
+            not afraid of new challenges, with a passion for creating intuitive
+            and eye-catching modern{" "}
             <span className="text-lightPink">web applications.</span>
           </SectionDescription>
         </div>

@@ -35,6 +35,8 @@ const WorkExperienceSection = () => {
               <JobsMenu liftActiveJob={setActiveJob} />
               {activeJob === "Euvic" ? (
                 <JobDescription
+                  hasSecondJobPeriod={true}
+                  secondJobPeriod={jobs[0].secondJobPeriod}
                   company={jobs[0].company}
                   jobDescription={jobs[0].jobDescription}
                   ocupation={jobs[0].ocupation}
