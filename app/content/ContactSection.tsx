@@ -34,8 +34,8 @@ const ContactSection = () => {
             recruitments or just want to leave me a message.
           </SectionDescription>
           <SectionDescription>
-            I`m currently looking for new opportunities so my inbox is always
-            open. You can send me an email using button below
+            Do not hestitate, my inbox is always open. You can send me an email
+            using button below
           </SectionDescription>
           <ButtonContact />
         </div>

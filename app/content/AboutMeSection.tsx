@@ -27,25 +27,22 @@ const AboutMeSection = () => {
       >
         <SectionHeader index="01" title="Who am I" />
         <SectionDescription>
-          Based in Poland self-taught developer, with over{" "}
+          Based in Poland software developer, with{" "}
           <span className="text-lightPink">
-            3 months of commercial eperience
-          </span>{" "}
-          and{" "}
-          <span className="text-lightPink">
-            2 years of non-commercial experience,
-          </span>{" "}
-          developing modern applications.
+            2 years of commercial experience.
+          </span>
         </SectionDescription>
         <SectionDescription>
-          My journey with creating web applications started at the university
-          where i have found passion for web development and since then I am
-          constantly making progress in my frontend career. I have a deep
-          understanding of{" "}
-          <span className="text-lightPink">React, Next.js, Vue.js </span>and{" "}
-          <span className="text-lightPink">Typescript. </span>I have actively
-          worked on numerous projects, both personal and professional and
-          participated in a coding hackathons.
+          Experienced in building scalable web applications using modern
+          technologies and best practices. Proficient in{" "}
+          <span className="text-lightPink">
+            React, Next.js, Node.js, Vue.js,
+          </span>{" "}
+          and <span className="text-lightPink">TypeScript</span>, with a proven
+          track record of delivering high-quality solutions across diverse
+          projects. Demonstrated expertise in full-stack development,
+          collaborative team environments, and competitive programming
+          challenges.
         </SectionDescription>
       </motion.div>
     </Container>

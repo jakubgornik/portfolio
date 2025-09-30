@@ -31,15 +31,6 @@ const TechStackSection = () => {
           <div className="flex flex-col justify-start gap-3 ">
             <SectionHeader index="02" title="Tech stack" />
             <SectionDescription>
-              Change is the only constant in technology. I don`t just embrace
-              it, I navigate through it with enthusiasm. Whether it`s a paradigm
-              shift in
-              <span className="text-lightPink"> frameworks </span>or the
-              introduction of
-              <span className="text-lightPink"> cutting-edge tools, </span>I see
-              each change as an opportunity to grow and enhance my capabilities.
-            </SectionDescription>
-            <SectionDescription>
               Below, you can explore my
               <span className="text-lightPink"> technology stack </span> and the
               <span className="text-lightPink"> tools </span> I leverage in my

@@ -1,6 +1,6 @@
 "use client";
+
 import Container from "../components/Container";
-import SectionDescription from "../components/SectionDescription";
 import { useSectionInView } from "../hooks/useSectionInView";
 import { motion } from "framer-motion";
 import useIsWindowWidthLowerThan from "../hooks/useIsWindowWidthLowerThan";
@@ -32,15 +32,8 @@ const HomeSection = () => {
             Jakub Górnik
           </h3>
           <h3 className="text-[24px] font-bold text-lightGray mobile-lg:text-[32px] sm:text-[34px] md:text-[52px] lg:text-[60px]">
-            Frontend developer
+            Fullstack software developer
           </h3>
-          <SectionDescription>
-            I am a passionate{" "}
-            <span className="text-lightPink">software developer</span> who is
-            not afraid of new challenges, with a passion for creating intuitive
-            and eye-catching modern{" "}
-            <span className="text-lightPink">web applications.</span>
-          </SectionDescription>
         </div>
       </motion.div>
     </Container>

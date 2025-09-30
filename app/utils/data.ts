@@ -48,6 +48,8 @@ export const technologiesAndTools = [
   "React.js",
   "Next.js",
   "Node.js",
+  "Nest.js",
+  "Express.js",
   "TailwindCSS",
   "MaterialUI",
   "HTML",
@@ -56,13 +58,16 @@ export const technologiesAndTools = [
   "Figma",
   "Jira",
   "Firebase",
+  "Supabase",
   "MongoDB",
+  "Docker",
   "SQL",
   "Redux toolkit",
   "Zustand",
-  "React Testing Library",
+  "Playwright",
   "Vitest",
   "Jest",
+  "React Testing Library",
   "Framer motion",
   "Tanstack Query",
   "GraphQL",
@@ -70,7 +75,7 @@ export const technologiesAndTools = [
 
 export const jobs = [
   {
-    timeRange: "June 2023 - July 2023,",
+    timeRange: "June 2023 - July 2023",
     company: "Euvic",
     ocupation: "Frontend developer",
     jobDescription: [
