@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Barlow } from "next/font/google";
-import ActiveSectionContextProvider from "./context/ActiveContextSection";
 import "./globals.css";
+import I18nProvider from "./i18n/i18n-provider";
+import ActiveSectionContextProvider from "./context/active-section-context";
 
 const barlow = Barlow({
   subsets: ["latin"],
@@ -21,7 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body className={barlow.className}>
-        <ActiveSectionContextProvider>{children}</ActiveSectionContextProvider>
+        <I18nProvider>
+          <ActiveSectionContextProvider>
+            {children}
+          </ActiveSectionContextProvider>
+        </I18nProvider>
       </body>
     </html>
   );

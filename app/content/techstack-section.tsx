@@ -1,17 +1,23 @@
 "use client";
-import SectionHeader from "../components/SectionHeader";
-import SectionDescription from "../components/SectionDescription";
-import Container from "../components/Container";
-import TechnologyCard from "../components/TechnologyCard";
-import Slider from "./ui/Slider";
-import { useSectionInView } from "../hooks/useSectionInView";
-import { technologiesAndTools } from "../utils/data";
-import { motion } from "framer-motion";
-import useIsWindowWidthLowerThan from "../hooks/useIsWindowWidthLowerThan";
 
-const TechStackSection = () => {
-  const { ref } = useSectionInView("Tech stack");
+import Container from "../components/Container";
+import { SectionName, technologiesAndTools } from "../utils/data";
+import { motion } from "framer-motion";
+import { Slider } from "./ui/slider";
+import { useTranslation } from "react-i18next";
+import SectionDescription from "../components/section-description";
+import SectionHeader from "../components/section-header";
+import TechnologyCard from "../components/technology-card";
+import useIsWindowWidthLowerThan from "../hooks/use-is-window-width-lower-than";
+import { useSectionInView } from "../hooks/use-section-in-view";
+
+export const TechStackSection = () => {
+  const { t } = useTranslation("translation", {
+    keyPrefix: "sections.techStack",
+  });
+  const { ref } = useSectionInView(SectionName.TechStack);
   const isWindowWidthLower = useIsWindowWidthLowerThan(520);
+
   return (
     <>
       <Container>
@@ -28,20 +34,24 @@ const TechStackSection = () => {
           ref={ref}
           className="flex scroll-mt-6 flex-col items-end pt-52"
         >
-          <div className="flex flex-col justify-start gap-3 ">
-            <SectionHeader index="02" title="Tech stack" />
+          <div className="flex flex-col justify-start gap-3">
+            <SectionHeader index={"02"} title={t("title")} />
             <SectionDescription>
-              Below, you can explore my
-              <span className="text-lightPink"> technology stack </span> and the
-              <span className="text-lightPink"> tools </span> I leverage in my
-              projects:
+              {t("description.part1")}{" "}
+              <span className="text-lightGray">
+                {t("description.highlight1")}
+              </span>{" "}
+              {t("description.part2")}{" "}
+              <span className="text-lightGray">
+                {t("description.highlight2")}
+              </span>{" "}
+              {t("description.part3")}
             </SectionDescription>
           </div>
         </motion.div>
-
         <div className="flex flex-col items-center gap-6 py-36">
           <h4 className="flex gap-2 text-[22px] text-yellowishWhite sm:text-[32px]">
-            My technology stack
+            {t("stackTitle")}
           </h4>
           <ul className="flex flex-wrap justify-center gap-2 md:max-w-[800px]">
             {technologiesAndTools.map((title, index) => (
@@ -59,5 +69,3 @@ const TechStackSection = () => {
     </>
   );
 };
-
-export default TechStackSection;

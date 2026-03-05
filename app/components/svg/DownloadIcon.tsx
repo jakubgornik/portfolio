@@ -3,7 +3,7 @@ const DownloadIcon = () => {
     <svg
       strokeWidth="0"
       viewBox="0 0 20 20"
-      className="fill-darkerPurple"
+      className="fill-[#161626]"
       height={15}
       width={15}
     >

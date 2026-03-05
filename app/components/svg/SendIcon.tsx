@@ -3,7 +3,7 @@ import React from "react";
 const SendIcon = () => {
   return (
     <svg
-      className="fill-purple"
+      className="fill-dark"
       strokeWidth="0"
       width={15}
       height={15}

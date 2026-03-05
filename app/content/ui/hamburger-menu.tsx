@@ -13,7 +13,7 @@ const path2 = {
   closed: { d: "M0 14.5L15 14.5" },
 };
 
-const HamburgerMenu = ({ animation }: { animation: string }) => {
+export const HamburgerMenu = ({ animation }: { animation: string }) => {
   return (
     <button id="hamburger-menu" aria-label="hamburger-menu">
       <svg width="30" height="30" viewBox="0 0 24 24">
@@ -31,4 +31,3 @@ const HamburgerMenu = ({ animation }: { animation: string }) => {
     </button>
   );
 };
-export default HamburgerMenu;

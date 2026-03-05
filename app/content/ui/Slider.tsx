@@ -13,7 +13,7 @@ import FigmaIcon from "@/app/components/svg/technologies/FigmaIcon";
 import HtmlIcon from "@/app/components/svg/technologies/HtmlIcon";
 import { useEffect } from "react";
 
-const Slider = () => {
+export const Slider = () => {
   useEffect(() => {
     const scrollers = document.querySelectorAll(".scroller");
     addAnimation(scrollers);
@@ -39,7 +39,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="mt-16 bg-purple shadow-lg">
+    <div className="bg-dark mt-16 shadow-lg">
       <Container>
         <div className="scroller mx-auto max-w-full">
           <div className="scroller-inner flex h-[70px] flex-wrap items-center justify-center gap-16 md:h-[100px]">
@@ -61,5 +61,3 @@ const Slider = () => {
     </div>
   );
 };
-
-export default Slider;

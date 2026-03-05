@@ -1,0 +1,49 @@
+{
+    "actions": {
+        "sendEmail": "Wyślij e-mail"
+    },
+    "sections": {
+        "contact": {
+            "title": "Kontakt",
+            "description1": "Jeśli szukasz dewelopera do swojego zespołu, chcesz porozmawiać o współpracy albo po prostu się skontaktować - napisz do mnie.",
+            "description2": "Możesz wysłać mi wiadomość e-mail, korzystając z przycisku poniżej. Postaram się odpowiedzieć tak szybko, jak to możliwe."
+        },
+        "home": {
+            "greeting": "Cześć, mam na imię",
+            "fullName": "Jakub Górnik",
+            "occupation": "Fullstack software developer"
+        },
+        "navigation": {
+            "logo": "Portfolio.",
+            "links": {
+                "home": "Home",
+                "about": "O mnie",
+                "techStack": "Stack",
+                "projects": "Projekty",
+                "experience": "Doświadczenie",
+                "contact": "Kontakt"
+            }
+        },
+        "about": {
+            "title": "O mnie",
+            "description1": "Jestem programistą z Polski z",
+            "highlight1": "ponad 2-letnim doświadczeniem komercyjnym.",
+            "description2_part1": "Tworzę nowoczesne i skalowalne aplikacje webowe, wykorzystując sprawdzone technologie i dobre praktyki. Pracuję głównie z",
+            "highlight2": "React, Next.js, Node.js, Nest.js",
+            "description2_part2": "oraz",
+            "highlight3": "TypeScript.",
+            "description2_part3": "Mam doświadczenie w tworzeniu aplikacji full-stack, pracy zespołowej oraz realizowaniu projektów o różnym stopniu złożoności."
+        },
+        "techStack": {
+            "title": "Stack technologiczny",
+            "description": {
+                "part1": "Poniżej znajdziesz mój",
+                "highlight1": "stack technologiczny",
+                "part2": "oraz",
+                "highlight2": "narzędzia",
+                "part3": "z których korzystam w swoich projektach:"
+            },
+            "stackTitle": "Technologie, z którymi pracuję"
+        }
+    }
+}

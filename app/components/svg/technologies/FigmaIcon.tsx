@@ -3,7 +3,7 @@ import React from "react";
 const FigmaIcon = () => {
   return (
     <svg
-      className="h-[35px] w-[35px] fill-lightPink md:h-[45px] md:w-[50px]"
+      className="h-[35px] w-[35px] fill-lightGray md:h-[45px] md:w-[50px]"
       viewBox="-4 0 23 23"
     >
       <path d="M7 0H3.5C1.567 0 0 1.567 0 3.5C0 5.433 1.567 7 3.5 7H7V0z" />

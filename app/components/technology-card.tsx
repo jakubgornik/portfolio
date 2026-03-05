@@ -18,7 +18,7 @@ const TechnologyCard = ({
       whileInView="animate"
       viewport={{ once: true }}
       custom={index}
-      className="list-none rounded-[3px] bg-purple px-2 py-2 shadow-lg"
+      className="bg-dark list-none rounded-[3px] px-2 py-2 shadow-lg"
     >
       <span
         className={`${

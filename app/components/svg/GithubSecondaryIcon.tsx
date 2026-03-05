@@ -3,7 +3,7 @@ import React from "react";
 const GithubSecondaryIcon = () => {
   return (
     <svg
-      className="h-[40px] w-[40px] cursor-pointer fill-none stroke-lightPink duration-300 hover:stroke-yellowishWhite"
+      className="h-[40px] w-[40px] cursor-pointer fill-none stroke-lightGray duration-300 hover:stroke-yellowishWhite"
       strokeWidth="2"
     >
       <title>GitHub</title>

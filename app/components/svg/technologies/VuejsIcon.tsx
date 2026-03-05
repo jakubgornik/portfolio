@@ -5,11 +5,11 @@ const VuejsIcon = () => {
       className="h-[35px] w-[35px] md:h-[45px] md:w-[60px]"
     >
       <path
-        className="fill-lightPink"
+        className="fill-lightGray"
         d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z"
       ></path>
       <path
-        className="fill-[#EA78C9]"
+        className="fill-yellowishWhite"
         d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z"
       ></path>
     </svg>

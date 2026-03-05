@@ -1,0 +1,101 @@
+{
+    "greeting": "Welcome to our platform!",
+    "description": "We make your supply chain effortless.",
+    "buttons": {
+        "getStarted": "Get Started",
+        "learnMore": "Learn More"
+    },
+    "actions": {
+        "sendEmail": "Send email"
+    },
+    "sections": {
+        "contact": {
+            "title": "Contact",
+            "description1": "Feel free to contacts me whether you are looking for a new promising developer for your team, want to stay in contact for future recruitments or just want to leave me a message.",
+            "description2": "Do not hestitate, my inbox is always open. You can send me an email using button below"
+        },
+        "home": {
+            "greeting": "Hello there, my name is",
+            "fullName": "Jakub Górnik",
+            "occupation": "Fullstack software developer"
+        },
+        "navigation": {
+            "logo": "Portfolio.",
+            "links": {
+                "home": "Home",
+                "about": "About",
+                "techStack": "Tech stack",
+                "projects": "Projects",
+                "experience": "Experience",
+                "contact": "Contact"
+            }
+        },
+        "about": {
+            "title": "Who am I",
+            "description1": "Based in Poland software developer, with",
+            "highlight1": "2 years of commercial experience.",
+            "description2_part1": "Experienced in building scalable web applications using modern technologies and best practices. Proficient in",
+            "highlight2": "React, Next.js, Node.js, Nest.js",
+            "description2_part2": "and",
+            "highlight3": "TypeScript.",
+            "description2_part3": "with a proven track record of delivering high-quality solutions across diverse projects. Demonstrated expertise in full-stack development, collaborative team environments, and competitive programming challenges."
+        },
+        "techStack": {
+            "title": "Tech stack",
+            "description": {
+                "part1": "Below, you can explore my",
+                "highlight1": "technology stack",
+                "part2": "and the",
+                "highlight2": "tools",
+                "part3": "I leverage in my projects:"
+            },
+            "stackTitle": "My technology stack"
+        },
+        "experience": {
+            "occupations": {
+                "frontend": "Frontend developer"
+            },
+            "euvic1": {
+                "timeRange": "June 2023 - July 2023",
+                "tasks": [
+                    "Developing modern web applications using React.js, Next.js and TailwindCSS",
+                    "Creating reusable components, hooks and utilities",
+                    "Working within a team of developers, designers and project managers",
+                    "Participating in code reviews",
+                    "Implementing new features and fixing bugs"
+                ]
+            },
+            "euvic2": {
+                "timeRange": "May 2024 - June 2024",
+                "tasks": [
+                    "Actively contributing to the refactor of the codebase to improve its quality and maintainability",
+                    "Developing modern web applications using Vue.js and its ecosystem",
+                    "Participating in the agile development of the client's product",
+                    "Actively participating in code reviews and pair programming sessions",
+                    "Implementing new features and fixing bugs"
+                ]
+            },
+            "webo": {
+                "timeRange": "August 2022 - September 2022",
+                "tasks": [
+                    "Developing modern web applications using Vue.js, Nuxt.js and TailwindCSS",
+                    "Responsible for creating modern single page application from scratch, according to provided design",
+                    "Implementing new features and fixing bugs",
+                    "Creating reusable components, hooks and utilities"
+                ]
+            }
+        },
+        "projects": {
+            "machinesManager": {
+                "title": "Machines Manager",
+                "subtitle": "Web application for machines management",
+                "description": "This web application provides many functionalities that aims to improve the processes of managing machines and scheduling. Application allows to add, delete and modify machines, set statuses and monitor them thanks to implemented table. Moreover registered user can use based on statuses calcualted statistics"
+            },
+            "easyBank": {
+                "title": "EasyBank",
+                "subtitle": "Modern single page application",
+                "description": "EasyBank is a website built and designed from scratch, that is fully responsive, user friendly and has many eye-catching animations that makes browsing through application as smooth as possible"
+            }
+        }
+    }
+}

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const JobsMenu = ({
+export const JobsMenu = ({
   liftActiveJob,
 }: {
   liftActiveJob: React.Dispatch<React.SetStateAction<string>>;
@@ -22,17 +22,16 @@ const JobsMenu = ({
           type="button"
           key={jobItem}
           onClick={() => handleSetActiveJob(jobItem)}
-          className={`relative px-6 py-2 text-[12px] duration-300 hover:bg-purple mobile-lg:text-[16px] sm:text-[18px] md:px-8 ${
+          className={`hover:bg-dark relative px-6 py-2 text-[12px] duration-300 mobile-lg:text-[16px] sm:text-[18px] md:px-8 ${
             activeJob === jobItem
-              ? "bg-purple text-lightPink"
+              ? "bg-dark text-lightGray"
               : "text-yellowishWhite"
           }`}
         >
           {jobItem}
-
           {jobItem === activeJob && (
             <motion.span
-              className="absolute inset-0 z-10 border-b-2 border-l-0 border-lightPink md:border-b-0 md:border-l-2 "
+              className="absolute inset-0 z-10 border-b-2 border-l-0 border-lightGray md:border-b-0 md:border-l-2 "
               layoutId="activeJob"
               transition={{
                 type: "spring",
@@ -46,5 +45,3 @@ const JobsMenu = ({
     </div>
   );
 };
-
-export default JobsMenu;

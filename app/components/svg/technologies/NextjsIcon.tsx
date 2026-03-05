@@ -1,7 +1,7 @@
 const NextjsIcon = () => {
   return (
     <svg
-      className="h-[70px] w-[70px] fill-lightPink md:h-[100px] md:w-[100px]"
+      className="h-[70px] w-[70px] fill-lightGray md:h-[100px] md:w-[100px]"
       viewBox="0 0 394 79"
     >
       <path d="M261.919 0.0330722H330.547V12.7H303.323V79.339H289.71V12.7H261.919V0.0330722Z"></path>

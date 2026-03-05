@@ -36,8 +36,8 @@ const ProjectPresentation = ({
           viewport={{ once: true }}
           className="col-[3/-1] row-[1/2] pt-8"
         >
-          <div className="flex flex-col rounded-[3px] bg-purple p-3 shadow-lg xl:p-6">
-            <span className="text-[22px] text-lightPink xl:text-[26px]">
+          <div className="bg-dark flex flex-col rounded-[3px] p-3 shadow-lg xl:p-6">
+            <span className="text-[22px] text-lightGray xl:text-[26px]">
               {description[0]}
             </span>
             <span className="text-[18px] text-yellowishWhite xl:text-[22px]">
@@ -83,7 +83,7 @@ const ProjectPresentation = ({
           className="rounded-[3px]"
         />
         <div className="z-100 relative flex w-full flex-col p-8 shadow-lg">
-          <span className="text-[22px] text-lightPink xl:text-[26px]">
+          <span className="text-[22px] text-lightGray xl:text-[26px]">
             {description[0]}
           </span>
           <span className="text-[18px] text-yellowishWhite xl:text-[22px]">
