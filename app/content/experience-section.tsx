@@ -27,7 +27,7 @@ const CardContent = ({ card }: CardProp) => {
   });
 
   return (
-    <div className="custom-scrollbar flex h-full flex-col justify-center overflow-y-auto px-6 py-8 md:px-8 lg:px-14 lg:py-10">
+    <div className="custom-scrollbar flex h-full flex-col justify-center overflow-y-auto px-6 py-8 pt-52 md:px-8 lg:px-14 lg:py-10">
       <motion.p
         variants={fadeUpVariants}
         className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-yellowishWhite lg:text-sm"
@@ -123,7 +123,7 @@ export const ExperienceSection = () => {
 
   return (
     <section ref={ref} className="relative py-8 md:py-16" id="experience">
-      <div className="mx-auto mb-8 max-w-7xl px-5 md:mb-12 md:px-10">
+      <div className="mx-auto mb-8 max-w-7xl px-5 pt-52 md:mb-12 md:px-10">
         <SectionHeader index="03" title={t("title")} />
       </div>
       <div className="mx-auto max-w-7xl px-5 md:px-10">
