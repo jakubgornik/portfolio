@@ -1,66 +1,42 @@
-// "use client";
+"use client";
 
-// import imageP1 from "../../public/img/machinesManager.png";
-// import imageP2 from "../../public/img/easyBank.png";
-// import imageMobileP1 from "../../public/img/machinesManagerMobile.png";
-// import imageMobileP2 from "../../public/img/easyBankMobile.png";
-// import Container from "../components/Container";
-// import SectionHeader from "../components/SectionHeader";
-// import { useSectionInView } from "../hooks/useSectionInView";
-// import {
-//   machinesManagerTech,
-//   easyBankTech,
-//   easyBankDesc,
-//   machinesManagerDesc,
-// } from "../utils/data";
-// import ProjectPresentation from "../components/ProjectPresentation";
+import { Container } from "../components/container";
+import { SectionName, projectsData } from "../utils/data";
+import { useSectionInView } from "../hooks/use-section-in-view";
+import { useTranslation } from "react-i18next";
+import { SectionHeader } from "../components/section-header";
+import { ProjectPresentation } from "../components/project-presentation";
 
-// export const ProjectsSection = () => {
-//   const { ref } = useSectionInView("Projects");
+export const ProjectsSection = () => {
+  const { ref } = useSectionInView(SectionName.Projects);
+  const { t } = useTranslation("translation", {
+    keyPrefix: "sections.projects",
+  });
 
-//   return (
-//     <>
-//       <Container>
-//         <div id="projects" ref={ref} className="flex flex-col pt-52">
-//           <SectionHeader index="04" title="My personal projects" />
-//           <ul className="hidden flex-col gap-12 pt-3 md:flex lg:gap-24 xl:gap-32">
-//             <ProjectPresentation
-//               img={imageP1}
-//               alt="MachinesManager site image"
-//               githubUrl="https://github.com/jakubgornik/portfolio"
-//               siteUrl="https://machines-manager.vercel.app/"
-//               technologies={machinesManagerTech}
-//               description={machinesManagerDesc}
-//             />
-//             <ProjectPresentation
-//               img={imageP2}
-//               alt="Easybank site image"
-//               githubUrl="https://github.com/jakubgornik/banking-site"
-//               siteUrl="https://banking-site-henna.vercel.app/"
-//               technologies={easyBankTech}
-//               description={easyBankDesc}
-//             />
-//           </ul>
-//           <ul className="flex flex-col gap-24 pt-3 md:hidden">
-//             <ProjectPresentation
-//               img={imageP1}
-//               alt="MachinesManager site image"
-//               githubUrl="https://github.com/jakubgornik/portfolio"
-//               siteUrl="https://machines-manager.vercel.app/"
-//               technologies={machinesManagerTech}
-//               description={machinesManagerDesc}
-//             />
-//             <ProjectPresentation
-//               img={imageMobileP2}
-//               alt="Easybank site image"
-//               githubUrl="https://github.com/jakubgornik/banking-site"
-//               siteUrl="https://banking-site-henna.vercel.app/"
-//               technologies={easyBankTech}
-//               description={easyBankDesc}
-//             />
-//           </ul>
-//         </div>
-//       </Container>
-//     </>
-//   );
-// };
+  return (
+    <Container>
+      <div id="projects" ref={ref} className="scroll-mt-28">
+        <div className="flex w-full justify-end pb-8 pt-52 md:pb-12">
+          <SectionHeader index="04" title={t("title")} />
+        </div>
+        <ul className="flex flex-col gap-24 pt-3 md:gap-12 lg:gap-24 xl:gap-32">
+          {projectsData.map((project) => (
+            <ProjectPresentation
+              key={project.id}
+              img={project.img}
+              alt={project.alt}
+              githubUrl={project.githubUrl}
+              siteUrl={project.siteUrl}
+              technologies={project.technologies}
+              description={[
+                t(`${project.tKey}.title`),
+                t(`${project.tKey}.subtitle`),
+                t(`${project.tKey}.description`),
+              ]}
+            />
+          ))}
+        </ul>
+      </div>
+    </Container>
+  );
+};

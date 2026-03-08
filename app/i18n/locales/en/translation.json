@@ -70,6 +70,19 @@
                 "timeRange": "Jun 2022 - Jul 2022",
                 "description": "I developed a modern Single Page Application (SPA) based on comprehensive visual designs, implementing features with high precision and an uncompromising attention to detail. I built dynamic UI components from scratch and collaborated closely with the team to refine and perfect the final user experience."
             }
+        },
+        "projects": {
+            "title": "Projects",
+            "logi": {
+                "title": "Logi",
+                "subtitle": "Logistics management system",
+                "description": "A comprehensive web application designed to support the full operational flow of procurement and sales. It streamlines routine processes by enabling users to add suppliers, create contracts, track inventory changes, link customers, and log transactions, providing a clear and actionable overview of company operations."
+            },
+            "timeworth": {
+                "title": "Timeworth",
+                "subtitle": "Team time tracking and management platform",
+                "description": "A robust time-tracking web application designed to help teams efficiently log work hours, manage entries, and generate detailed reports. The platform features secure authentication with seamless token refresh and offers distinct, role-based workflows for managers and employees. By intelligently linking organizations, users, and time logs, the system streamlines approval processes and operational reporting. It also includes bulk data import/export capabilities and a fully responsive interface built with complex, reusable UI components."
+            }
         }
     }
 }

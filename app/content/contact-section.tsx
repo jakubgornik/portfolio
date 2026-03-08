@@ -1,14 +1,14 @@
 "use client";
 
-import Container from "../components/Container";
+import { Container } from "../components/container";
 import { motion } from "framer-motion";
 import { ButtonContact } from "./ui/contact-button";
 import { useTranslation } from "react-i18next";
-import SectionHeader from "../components/section-header";
 import SectionDescription from "../components/section-description";
 import useIsWindowWidthLowerThan from "../hooks/use-is-window-width-lower-than";
 import { useSectionInView } from "../hooks/use-section-in-view";
 import { SectionName } from "../utils/data";
+import { SectionHeader } from "../components/section-header";
 
 export const ContactSection = () => {
   const { ref } = useSectionInView(SectionName.Contact);

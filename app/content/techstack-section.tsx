@@ -1,15 +1,15 @@
 "use client";
 
-import Container from "../components/Container";
+import { Container } from "../components/container";
 import { SectionName, technologiesAndTools } from "../utils/data";
 import { motion } from "framer-motion";
 import { Slider } from "./ui/slider";
 import { useTranslation } from "react-i18next";
 import SectionDescription from "../components/section-description";
-import SectionHeader from "../components/section-header";
 import TechnologyCard from "../components/technology-card";
 import useIsWindowWidthLowerThan from "../hooks/use-is-window-width-lower-than";
 import { useSectionInView } from "../hooks/use-section-in-view";
+import { SectionHeader } from "../components/section-header";
 
 export const TechStackSection = () => {
   const { t } = useTranslation("translation", {
@@ -35,7 +35,9 @@ export const TechStackSection = () => {
           className="flex scroll-mt-6 flex-col items-end pt-52"
         >
           <div className="flex flex-col justify-start gap-3">
-            <SectionHeader index={"02"} title={t("title")} />
+            <div className="self-end">
+              <SectionHeader index={"02"} title={t("title")} />
+            </div>
             <SectionDescription>
               {t("description.part1")}{" "}
               <span className="text-lightGray">
@@ -49,6 +51,7 @@ export const TechStackSection = () => {
             </SectionDescription>
           </div>
         </motion.div>
+
         <div className="flex flex-col items-center gap-6 py-36">
           <h4 className="flex gap-2 text-[22px] text-yellowishWhite sm:text-[32px]">
             {t("stackTitle")}

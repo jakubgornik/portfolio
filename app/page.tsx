@@ -5,6 +5,7 @@ import { ContactSection } from "./content/contact-section";
 import { SocialLinks } from "./content/ui/social-links";
 import { Navigation } from "./content/navigation.tsx";
 import { ExperienceSection } from "./content/experience-section";
+import { ProjectsSection } from "./content/projects-section";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <AboutMeSection />
       <TechStackSection />
       <ExperienceSection />
-      {/* <ProjectsSection /> */}
+      <ProjectsSection />
       <ContactSection />
       <SocialLinks />
     </>

@@ -64,6 +64,19 @@
                 "timeRange": "Czerwiec 2022 - Lipiec 2022",
                 "description": "Rozwijałem single-page application w oparciu o gotowy projekt wizualny, implementując funkcjonalności z dużą dokładnością  i  pełną dbałością o każdy szczegół. Tworzyłem nowe elementy interfejsu oraz współpracowałem z zespołem przy dopracowywaniu rozwiązań."
             }
+        },
+        "projects": {
+            "title": "Projekty",
+            "logi": {
+                "title": "Logi",
+                "subtitle": "System zarządzania logistyką",
+                "description": "Rozbudowana aplikacja webowa wspierająca pełny proces operacyjny związany z zakupami i sprzedażą. Usprawnia codzienną pracę, umożliwiając dodawanie dostawców, tworzenie kontraktów, śledzenie zmian w magazynie, powiązywanie klientów oraz rejestrowanie transakcji. Dzięki temu zapewnia przejrzysty i użyteczny wgląd w bieżące operacje firmy."
+            },
+            "timeworth": {
+                "title": "Timeworth",
+                "subtitle": "Platforma do ewidencji i zarządzania czasem pracy zespołu",
+                "description": "Zaawansowana aplikacja webowa do rejestrowania czasu pracy zespołów. Umożliwia wygodne logowanie godzin, zarządzanie wpisami oraz generowanie szczegółowych raportów. System oferuje bezpieczne uwierzytelnianie z automatycznym odświeżaniem tokenów oraz różne ścieżki pracy w zależności od roli użytkownika (manager lub pracownik). Dzięki powiązaniu organizacji, użytkowników i wpisów czasu pracy usprawnia proces zatwierdzania oraz raportowania. Aplikacja wspiera również import i eksport danych w większych partiach oraz posiada w pełni responsywny interfejs oparty na złożonych, wielokrotnego użytku komponentach UI."
+            }
         }
     }
 }

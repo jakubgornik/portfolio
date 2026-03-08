@@ -1,13 +1,13 @@
 "use client";
 
-import Container from "../components/Container";
+import { Container } from "../components/container";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import SectionDescription from "../components/section-description";
-import SectionHeader from "../components/section-header";
 import { useSectionInView } from "../hooks/use-section-in-view";
 import { SectionName } from "../utils/data";
 import useIsWindowWidthLowerThan from "../hooks/use-is-window-width-lower-than";
+import { SectionHeader } from "../components/section-header";
 
 export const AboutMeSection = () => {
   const { ref } = useSectionInView(SectionName.About);

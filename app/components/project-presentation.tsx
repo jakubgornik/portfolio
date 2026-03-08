@@ -1,26 +1,28 @@
 import Image from "next/image";
-import TechnologyCard from "./TechnologyCard";
 import Link from "next/link";
 import GithubSecondaryIcon from "./svg/GithubSecondaryIcon";
 import LinkIcon from "./svg/LinkIcon";
 import { motion } from "framer-motion";
 import { StaticImageData } from "next/image";
+import TechnologyCard from "./technology-card";
 
-const ProjectPresentation = ({
+interface ProjectPresentationProps {
+  technologies?: string[];
+  description?: string[];
+  githubUrl: string;
+  siteUrl: string;
+  img: StaticImageData;
+  alt: string;
+}
+
+export const ProjectPresentation = ({
   technologies,
   description,
   githubUrl,
   siteUrl,
   img,
   alt,
-}: {
-  technologies: string[];
-  description: string[];
-  githubUrl: string;
-  siteUrl: string;
-  img: StaticImageData;
-  alt: string;
-}) => {
+}: ProjectPresentationProps) => {
   return (
     <>
       <li className="hidden grid-cols-6 md:grid">
@@ -36,20 +38,20 @@ const ProjectPresentation = ({
           viewport={{ once: true }}
           className="col-[3/-1] row-[1/2] pt-8"
         >
-          <div className="bg-dark flex flex-col rounded-[3px] p-3 shadow-lg xl:p-6">
+          <div className="flex flex-col rounded-[3px] bg-dark p-3 shadow-lg xl:p-6">
             <span className="text-[22px] text-lightGray xl:text-[26px]">
-              {description[0]}
+              {description?.[0]}
             </span>
             <span className="text-[18px] text-yellowishWhite xl:text-[22px]">
-              {description[1]}
+              {description?.[1]}
             </span>
             <div className="mt-1 text-[14px] text-yellowishWhite xl:text-[16px]">
-              {description[2]}
+              {description?.[2]}
             </div>
           </div>
           <div className="flex flex-col gap-4">
             <ul className="flex justify-end gap-2 pt-3 text-[14px]">
-              {technologies.map((title, index) => (
+              {technologies?.map((title, index) => (
                 <TechnologyCard
                   key={index}
                   index={index}
@@ -69,10 +71,10 @@ const ProjectPresentation = ({
           </div>
         </motion.div>
       </li>
-
       <motion.li
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         className="relative flex md:hidden"
       >
         <Image
@@ -82,19 +84,19 @@ const ProjectPresentation = ({
           layout="fill"
           className="rounded-[3px]"
         />
-        <div className="z-100 relative flex w-full flex-col p-8 shadow-lg">
-          <span className="text-[22px] text-lightGray xl:text-[26px]">
-            {description[0]}
+        <div className="relative z-10 flex w-full flex-col rounded-[3px] bg-dark/70 p-8 shadow-lg backdrop-blur-sm">
+          <span className="text-[22px] font-bold text-lightGray xl:text-[26px]">
+            {description?.[0]}
           </span>
-          <span className="text-[18px] text-yellowishWhite xl:text-[22px]">
-            {description[1]}
+          <span className="text-[18px] font-medium text-yellowishWhite xl:text-[22px]">
+            {description?.[1]}
           </span>
-          <div className="mt-1 max-w-lg text-[14px] text-yellowishWhite xl:text-[16px]">
-            {description[2]}
+          <div className="mt-2 max-w-lg text-[14px] text-yellowishWhite/90 xl:text-[16px]">
+            {description?.[2]}
           </div>
-          <div className="flex flex-col gap-4">
-            <ul className="flex flex-wrap gap-2 pt-3 text-[14px]">
-              {technologies.map((title, index) => (
+          <div className="flex flex-col gap-4 pt-4">
+            <ul className="flex flex-wrap gap-2 text-[14px]">
+              {technologies?.map((title, index) => (
                 <TechnologyCard
                   key={index}
                   index={index}
@@ -103,11 +105,19 @@ const ProjectPresentation = ({
                 />
               ))}
             </ul>
-            <div className="flex gap-2">
-              <Link target="_blank" href={githubUrl}>
+            <div className="flex gap-2 pt-2">
+              <Link
+                target="_blank"
+                href={githubUrl}
+                className="transition-opacity hover:opacity-80"
+              >
                 <GithubSecondaryIcon />
               </Link>
-              <Link target="_blank" href={siteUrl}>
+              <Link
+                target="_blank"
+                href={siteUrl}
+                className="transition-opacity hover:opacity-80"
+              >
                 <LinkIcon />
               </Link>
             </div>
@@ -117,5 +127,3 @@ const ProjectPresentation = ({
     </>
   );
 };
-
-export default ProjectPresentation;

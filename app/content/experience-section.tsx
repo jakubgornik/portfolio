@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import TechnologyCard from "../components/technology-card";
-import SectionHeader from "../components/section-header";
 import { useTranslation } from "react-i18next";
 import { experienceCards, SectionName } from "../utils/data";
 import { cardVariants, fadeUpVariants } from "../utils/animationVariants";
 import { useSectionInView } from "../hooks/use-section-in-view";
+import { SectionHeader } from "../components/section-header";
 
 export interface CardData {
   id: number;
@@ -124,7 +124,7 @@ export const ExperienceSection = () => {
   return (
     <section ref={ref} className="relative py-8 md:py-16" id="experience">
       <div className="mx-auto mb-8 max-w-7xl px-5 md:mb-12 md:px-10">
-        <SectionHeader index="04" title={t("title")} />
+        <SectionHeader index="03" title={t("title")} />
       </div>
       <div className="mx-auto max-w-7xl px-5 md:px-10">
         <div className="relative flex flex-col gap-6 md:gap-8">
