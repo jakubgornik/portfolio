@@ -1,3 +1,5 @@
+import { CardData } from "../content/experience-section";
+
 export const navigationLinks = [
   {
     name: "Home",
@@ -15,14 +17,14 @@ export const navigationLinks = [
     tKey: "techStack",
   },
   {
-    name: "Projects",
-    id: "#projects",
-    tKey: "projects",
-  },
-  {
     name: "Experience",
     id: "#experience",
     tKey: "experience",
+  },
+  {
+    name: "Projects",
+    id: "#projects",
+    tKey: "projects",
   },
   {
     name: "Contact",
@@ -54,24 +56,57 @@ export const technologiesAndTools = [
   "MaterialUI",
   "HTML",
   "Git",
-  "CSS(SASS)",
-  "Figma",
-  "Jira",
+  "CSS",
   "Firebase",
   "Supabase",
+  "AWS",
   "MongoDB",
+  "Prisma",
   "Docker",
-  "SQL",
-  "Redux toolkit",
-  "Zustand",
   "Playwright",
   "Vitest",
   "Jest",
-  "React Testing Library",
-  "Framer motion",
-  "Tanstack Query",
-  "GraphQL",
 ] as const;
+
+export const experienceCards: CardData[] = [
+  {
+    id: 1,
+    company: "Gorrion",
+    tKey: "gorrion",
+    roleKey: "occupations.fullstack",
+    tech: [
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "NestJS",
+      "Prisma",
+      "Firebase",
+      "AWS",
+      "Docker",
+      "Jest",
+      "Playwright",
+      "MaterialUI",
+      "styled-components",
+    ],
+    bg: "#1a1a1a",
+  },
+  {
+    id: 2,
+    company: "Euvic",
+    tKey: "euvic",
+    roleKey: "occupations.frontend",
+    tech: ["TypeScript", "React.js", "Next.js", "TailwindCSS"],
+    bg: "#262626",
+  },
+  {
+    id: 3,
+    company: "Webo",
+    tKey: "webo",
+    roleKey: "occupations.frontend",
+    tech: ["TypeScript", "React.js", "Next.js", "TailwindCSS"],
+    bg: "#333333",
+  },
+];
 
 // export const machinesManagerTech = [
 //   "Typescript",

@@ -11,7 +11,7 @@
         "home": {
             "greeting": "Cześć, mam na imię",
             "fullName": "Jakub Górnik",
-            "occupation": "Fullstack software developer"
+            "occupation": "Fullstack Software Developer"
         },
         "navigation": {
             "logo": "Portfolio.",
@@ -44,6 +44,26 @@
                 "part3": "z których korzystam w swoich projektach:"
             },
             "stackTitle": "Technologie, z którymi pracuję"
+        },
+        "experience": {
+            "title": "Doświadczenie",
+            "techStack": "Tech Stack",
+            "occupations": {
+                "frontend": "Frontend Developer",
+                "fullstack": "Fullstack Developer"
+            },
+            "gorrion": {
+                "timeRange": "Lipiec 2024 - Obecnie",
+                "description": "Jako Fullstack Developer zajmuję się rozwijaniem aplikacji SaaS z branży odnawialnych źródeł energii. Biorę udział w każdym etapie prac: od projektowania, przez utrzymanie, aż po wdrażanie nowych funkcjonalności zarówno na frontendzie, jak i backendzie, dbając o jakość kodu, wydajność i skalowalność systemu. Biorę udział w integracji z europejską bazą danych. Dbając o najwyższe standardy, wykorzystuję podejście DDD do modelowania złożonej logiki biznesowej. Pisze testy jednostkowe, integracyjne, a także E2E  oraz regularnie przeprowadzam code review. Dzięki pracy w Agile oraz aktywnemu udziałowi w refinementach mam bezpośredni wpływ na to, jak technicznie realizujemy wizję całego produktu."
+            },
+            "euvic": {
+                "timeRange": "Maj 2024 - Czerwiec 2024 | Czerwiec 2023 - Lipiec 2023",
+                "description": "Praca przy projektach webowych: rozwijałem interfejs użytkownika, implementowałem logikę aplikacji, integrowałem z zewnętrznymi bibliotekami i tworzyłem nowe funkcjonalności. Odpowiadałem za wdrażanie rozwiązań, współpracę z zespołem i optymalizację kodu."
+            },
+            "webo": {
+                "timeRange": "Czerwiec 2022 - Lipiec 2022",
+                "description": "Rozwijałem single-page application w oparciu o gotowy projekt wizualny, implementując funkcjonalności z dużą dokładnością  i  pełną dbałością o każdy szczegół. Tworzyłem nowe elementy interfejsu oraz współpracowałem z zespołem przy dopracowywaniu rozwiązań."
+            }
         }
     }
 }

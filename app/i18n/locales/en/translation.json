@@ -17,7 +17,7 @@
         "home": {
             "greeting": "Hello there, my name is",
             "fullName": "Jakub Górnik",
-            "occupation": "Fullstack software developer"
+            "occupation": "Fullstack Software Developer"
         },
         "navigation": {
             "logo": "Portfolio.",
@@ -52,49 +52,23 @@
             "stackTitle": "My technology stack"
         },
         "experience": {
+            "title": "Experience",
+            "techStack": "Tech Stack",
             "occupations": {
-                "frontend": "Frontend developer"
+                "frontend": "Frontend Developer",
+                "fullstack": "Fullstack Developer"
             },
-            "euvic1": {
-                "timeRange": "June 2023 - July 2023",
-                "tasks": [
-                    "Developing modern web applications using React.js, Next.js and TailwindCSS",
-                    "Creating reusable components, hooks and utilities",
-                    "Working within a team of developers, designers and project managers",
-                    "Participating in code reviews",
-                    "Implementing new features and fixing bugs"
-                ]
+            "gorrion": {
+                "timeRange": "Jul 2024 - Present",
+                "description": "As a Fullstack Developer, I am developing a SaaS application for the renewable energy sector. I am actively involved in the entire software lifecycle—from system design and maintenance to implementing new features across both the frontend and backend—ensuring high code quality, performance, and scalability. My responsibilities include integrating with a central European database and applying Domain-Driven Design (DDD) to model complex business logic. I maintain rigorous standards by writing unit, integration, and E2E tests, alongside conducting regular code reviews. Working in an Agile environment and actively participating in backlog refinements, I have a direct impact on the technical execution of the product's vision."
             },
-            "euvic2": {
-                "timeRange": "May 2024 - June 2024",
-                "tasks": [
-                    "Actively contributing to the refactor of the codebase to improve its quality and maintainability",
-                    "Developing modern web applications using Vue.js and its ecosystem",
-                    "Participating in the agile development of the client's product",
-                    "Actively participating in code reviews and pair programming sessions",
-                    "Implementing new features and fixing bugs"
-                ]
+            "euvic": {
+                "timeRange": "May 2024 - Jun 2024 | Jun 2023 - Jul 2023",
+                "description": "I contributed to various web projects, focusing on developing intuitive user interfaces and implementing robust application logic. My role involved integrating external libraries, building new features, and deploying scalable solutions. I collaborated closely with the development team to deliver high-quality products while continuously optimizing code for maximum performance."
             },
             "webo": {
-                "timeRange": "August 2022 - September 2022",
-                "tasks": [
-                    "Developing modern web applications using Vue.js, Nuxt.js and TailwindCSS",
-                    "Responsible for creating modern single page application from scratch, according to provided design",
-                    "Implementing new features and fixing bugs",
-                    "Creating reusable components, hooks and utilities"
-                ]
-            }
-        },
-        "projects": {
-            "machinesManager": {
-                "title": "Machines Manager",
-                "subtitle": "Web application for machines management",
-                "description": "This web application provides many functionalities that aims to improve the processes of managing machines and scheduling. Application allows to add, delete and modify machines, set statuses and monitor them thanks to implemented table. Moreover registered user can use based on statuses calcualted statistics"
-            },
-            "easyBank": {
-                "title": "EasyBank",
-                "subtitle": "Modern single page application",
-                "description": "EasyBank is a website built and designed from scratch, that is fully responsive, user friendly and has many eye-catching animations that makes browsing through application as smooth as possible"
+                "timeRange": "Jun 2022 - Jul 2022",
+                "description": "I developed a modern Single Page Application (SPA) based on comprehensive visual designs, implementing features with high precision and an uncompromising attention to detail. I built dynamic UI components from scratch and collaborated closely with the team to refine and perfect the final user experience."
             }
         }
     }

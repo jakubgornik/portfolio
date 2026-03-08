@@ -39,13 +39,12 @@ export const Slider = () => {
   };
 
   return (
-    <div className="bg-dark mt-16 shadow-lg">
+    <div className="mt-16 bg-dark shadow-lg">
       <Container>
         <div className="scroller mx-auto max-w-full">
           <div className="scroller-inner flex h-[70px] flex-wrap items-center justify-center gap-16 md:h-[100px]">
             <NextJsIcon />
             <ReactJsIcon />
-            <VueJsIcon />
             <JavascriptIcon />
             <TypescriptIcon />
             <TailwindIcon />
