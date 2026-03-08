@@ -1,6 +1,6 @@
 "use client";
 
-import { Container } from "../components/container";
+import { Container } from "@/app/components/container";
 import { SectionName, projectsData } from "../utils/data";
 import { useSectionInView } from "../hooks/use-section-in-view";
 import { useTranslation } from "react-i18next";

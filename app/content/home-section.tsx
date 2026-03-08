@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useSectionInView } from "../hooks/use-section-in-view";
 import { SectionName } from "../utils/data";
 import useIsWindowWidthLowerThan from "../hooks/use-is-window-width-lower-than";
-import { Container } from "../components/container";
+import { Container } from "@/app/components/container";
 
 export const HomeSection = () => {
   const { ref } = useSectionInView(SectionName.Home);

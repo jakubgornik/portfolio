@@ -1,6 +1,6 @@
 "use client";
 
-import { Container } from "../components/container";
+import { Container } from "@/app/components/container";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import SectionDescription from "../components/section-description";
