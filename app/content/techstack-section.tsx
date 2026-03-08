@@ -3,7 +3,7 @@
 import { Container } from "@/app/components/container";
 import { SectionName, technologiesAndTools } from "../utils/data";
 import { motion } from "framer-motion";
-import { Slider } from "./ui/slider";
+import { Slider } from "@/app/content/ui/slider";
 import { useTranslation } from "react-i18next";
 import SectionDescription from "../components/section-description";
 import TechnologyCard from "../components/technology-card";
