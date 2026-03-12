@@ -23,8 +23,8 @@ const TechnologyCard = ({
       <span
         className={`${
           variant === "project"
-            ? "text-[14px] xl:text-[16px]"
-            : "text-[12px] mobile-lg:text-[16px] xl:text-[18px]"
+            ? "text-sm xl:text-[16px]"
+            : "text-sm mobile-lg:text-[16px] xl:text-[18px]"
         } text-yellowishWhite`}
       >
         {title}

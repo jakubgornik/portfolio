@@ -32,7 +32,7 @@ export const TechStackSection = () => {
           viewport={{ once: true }}
           id="techstack"
           ref={ref}
-          className="flex scroll-mt-6 flex-col items-end pt-52"
+          className="flex flex-col items-end pt-28 md:pt-52"
         >
           <div className="flex flex-col justify-start gap-3">
             <div className="self-end">
@@ -52,7 +52,7 @@ export const TechStackSection = () => {
           </div>
         </motion.div>
 
-        <div className="flex flex-col items-center gap-6 py-36">
+        <div className="flex flex-col items-center gap-6 py-20 md:py-36">
           <h4 className="flex gap-2 text-[22px] text-yellowishWhite sm:text-[32px]">
             {t("stackTitle")}
           </h4>

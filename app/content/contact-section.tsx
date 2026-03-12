@@ -30,10 +30,10 @@ export const ContactSection = () => {
         viewport={{ once: true }}
         id="contact"
         ref={ref}
-        className="flex scroll-mt-6 flex-col gap-24 pb-64 pt-52 sm:flex-row sm:gap-6"
+        className="pb-32 pt-28 sm:flex-row  sm:gap-6 md:pb-64 md:pt-52"
       >
         <div className="flex flex-col gap-3">
-          <SectionHeader index="06" title={t("title")} />
+          <SectionHeader index="05" title={t("title")} />
           <SectionDescription>{t("description1")}</SectionDescription>
           <SectionDescription>{t("description2")}</SectionDescription>
           <ButtonContact />

@@ -40,7 +40,7 @@ export const LanguageSwitcher = () => {
     <div ref={dropdownRef} className="relative z-50 sm:fixed sm:left-8">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="text-darkerDark flex w-full cursor-pointer items-center justify-between gap-2 rounded-lg bg-yellowishWhite px-10 py-2 text-[12px] font-semibold shadow-lg duration-300 hover:bg-lightGray sm:px-3 sm:py-[12px]"
+        className="flex w-full cursor-pointer items-center justify-between gap-2 rounded-lg bg-yellowishWhite px-10 py-2 text-xs font-semibold text-darkerDark shadow-lg duration-300 hover:bg-lightGray sm:px-3 sm:py-[12px]"
       >
         {currentLangLabel}
         <svg
@@ -61,7 +61,7 @@ export const LanguageSwitcher = () => {
         <div className="absolute left-0 mt-1 flex w-full flex-col overflow-hidden rounded-lg bg-yellowishWhite shadow-xl">
           <button
             onClick={() => changeLanguage(nextLangCode)}
-            className="text-darkerDark px-4 py-3 text-[12px] font-semibold transition-colors hover:bg-lightGray"
+            className="px-4 py-3 text-xs font-semibold text-darkerDark transition-colors hover:bg-lightGray"
           >
             {nextLangLabel}
           </button>

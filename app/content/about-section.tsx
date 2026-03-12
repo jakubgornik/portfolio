@@ -27,7 +27,7 @@ export const AboutMeSection = () => {
         viewport={{ once: true }}
         id="about"
         ref={ref}
-        className="mt-52 flex scroll-mt-6 flex-col gap-3 mobile-lg:pt-0"
+        className="flex flex-col gap-3"
       >
         <SectionHeader index={"01"} title={t("title")} />
         <SectionDescription>

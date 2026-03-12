@@ -27,7 +27,7 @@ export const HomeSection = () => {
         viewport={{ once: true }}
         id="home"
         ref={ref}
-        className="flex items-center pt-72 "
+        className="flex items-center pb-28 pt-36 md:pb-52 md:pt-72"
       >
         <div className="flex flex-col">
           <p className="first-letter text-sm text-lightGray mobile-lg:text-lg sm:text-xl lg:text-2xl">

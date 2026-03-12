@@ -16,8 +16,8 @@ export const ProjectsSection = () => {
   return (
     <Container>
       <div id="projects" ref={ref} className="scroll-mt-28">
-        <div className="flex w-full justify-end pb-8 pt-52 md:pb-12">
-          <SectionHeader index="05" title={t("title")} />
+        <div className="flex w-full justify-end pb-8 pt-28 md:pb-12 md:pt-52">
+          <SectionHeader index="04" title={t("title")} />
         </div>
         <ul className="flex flex-col gap-24 pt-3 md:gap-12 lg:gap-24 xl:gap-32">
           {projectsData.map((project) => (
