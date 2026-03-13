@@ -102,7 +102,7 @@ const ExperienceCardItem = ({ card, index }: ExperienceCardItemProps) => {
         viewport={{ once: true, amount: 0.1 }}
         variants={cardVariants}
         style={{ backgroundColor: card.bg }}
-        className="flex h-[380px] flex-col overflow-hidden rounded-lg bg-dark sm:h-[420px] md:h-[600px] md:flex-row"
+        className="flex h-[540px] flex-col overflow-hidden rounded-lg bg-dark md:h-[600px] md:flex-row"
       >
         <div className="h-full w-full md:w-[55%] lg:w-1/2">
           <CardContent card={card} />

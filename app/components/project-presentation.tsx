@@ -84,7 +84,7 @@ export const ProjectPresentation = ({
           layout="fill"
           className="rounded-[3px]"
         />
-        <div className="relative z-10 flex w-full flex-col rounded-[3px] bg-dark/70 p-8 shadow-lg backdrop-blur-sm">
+        <div className="relative z-10 flex w-full flex-col rounded-[3px] bg-dark/70 p-8 shadow-lg backdrop-blur-lg">
           <span className="text-[22px] font-bold text-lightGray xl:text-[26px]">
             {description?.[0]}
           </span>
