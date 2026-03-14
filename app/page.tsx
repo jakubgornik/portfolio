@@ -6,10 +6,11 @@ import { SocialLinks } from "./content/ui/social-links";
 import { Navigation } from "./content/navigation.tsx";
 import { ExperienceSection } from "./content/experience-section";
 import { ProjectsSection } from "./content/projects-section";
+import { SmoothScroll } from "./content/smooth-scroll";
 
 export default function Home() {
   return (
-    <>
+    <SmoothScroll>
       <Navigation />
       <HomeSection />
       <AboutMeSection />
@@ -18,6 +19,6 @@ export default function Home() {
       <ProjectsSection />
       <ContactSection />
       <SocialLinks />
-    </>
+    </SmoothScroll>
   );
 }

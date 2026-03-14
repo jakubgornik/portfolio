@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import type { SectionNames } from "../utils/data";
 import { useTranslation } from "react-i18next";
 import { useActiveSectionContext } from "../context/active-section-context";
+import { useLenis } from "lenis/react";
 
 export const NavigationItem = ({
   navigationElement,
@@ -22,19 +23,26 @@ export const NavigationItem = ({
   const { t } = useTranslation("translation", {
     keyPrefix: "sections.navigation",
   });
+  const lenis = useLenis();
+
+  const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (lenis) {
+      lenis.scrollTo(navigationElement.id);
+    }
+    setActiveSection(navigationElement.name);
+    setTimeOfLastClick(Date.now());
+
+    if (closeMobileMenu) closeMobileMenu();
+  };
 
   return (
     <>
       {variant === "desktop" ? (
-        <motion.li
-          onClick={() => {
-            setActiveSection(navigationElement.name);
-            setTimeOfLastClick(Date.now());
-          }}
-          className="relative cursor-pointer"
-        >
+        <motion.li className="relative cursor-pointer">
           <Link
             href={navigationElement.id}
+            onClick={handleScrollToSection}
             className={`${
               activeSection === navigationElement.name
                 ? "text-dark"
@@ -56,11 +64,8 @@ export const NavigationItem = ({
           </Link>
         </motion.li>
       ) : (
-        <li
-          onClick={() => closeMobileMenu && closeMobileMenu()}
-          className="w-[120px] px-3 text-yellowishWhite hover:text-lightGray"
-        >
-          <Link href={navigationElement.id}>
+        <li className="w-[120px] px-3 text-yellowishWhite hover:text-lightGray">
+          <Link href={navigationElement.id} onClick={handleScrollToSection}>
             <span className="pr-1 text-lightGray duration-300 ">{index}.</span>
             {t(`links.${navigationElement.tKey}`)}
           </Link>
