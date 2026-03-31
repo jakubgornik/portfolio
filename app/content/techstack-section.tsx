@@ -1,7 +1,14 @@
 "use client";
 
 import { Container } from "@/app/components/container";
-import { SectionName, technologiesAndTools } from "../utils/data";
+import {
+  SectionName,
+  technologiesAndTools,
+  technologiesAndToolsGrouped,
+  technologyCategories,
+  TechnologyCategory,
+  TechnologyFilterName,
+} from "../utils/data";
 import { motion } from "framer-motion";
 import { Slider } from "@/app/content/ui/slider";
 import { useTranslation } from "react-i18next";
@@ -10,12 +17,26 @@ import TechnologyCard from "../components/technology-card";
 import useIsWindowWidthLowerThan from "../hooks/use-is-window-width-lower-than";
 import { useSectionInView } from "../hooks/use-section-in-view";
 import { SectionHeader } from "../components/section-header";
+import { TechnologyCategoryFilter } from "../components/technology-filter";
+import { useMemo, useState } from "react";
+
+export type TechnologyFilterOption = TechnologyCategory | "all";
 
 export const TechStackSection = () => {
   const { t } = useTranslation("translation", {
     keyPrefix: "sections.techStack",
   });
   const { ref } = useSectionInView(SectionName.TechStack);
+  const [activeCategory, setActiveCategory] = useState<TechnologyFilterOption>(
+    TechnologyFilterName.All,
+  );
+
+  const visibleTechnologies = useMemo(() => {
+    if (activeCategory === TechnologyFilterName.All)
+      return technologiesAndTools;
+    return technologiesAndToolsGrouped[activeCategory];
+  }, [activeCategory]);
+
   const isWindowWidthLower = useIsWindowWidthLowerThan(520);
 
   return (
@@ -56,10 +77,22 @@ export const TechStackSection = () => {
           <h4 className="flex gap-2 text-[22px] text-yellowishWhite sm:text-[32px]">
             {t("stackTitle")}
           </h4>
+          <TechnologyCategoryFilter
+            categories={technologyCategories}
+            active={activeCategory}
+            onChange={setActiveCategory}
+            labels={{
+              all: t("filters.all"),
+              ...Object.fromEntries(
+                technologyCategories.map((c) => [c, t(`filters.${c}`)]),
+              ),
+            }}
+          />
+          ;
           <ul className="flex flex-wrap justify-center gap-2 md:max-w-[800px]">
-            {technologiesAndTools.map((title, index) => (
+            {visibleTechnologies.map((title, index) => (
               <TechnologyCard
-                key={index}
+                key={`${title}-${index}`}
                 index={index}
                 title={title}
                 variant=""

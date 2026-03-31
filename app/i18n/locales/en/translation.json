@@ -49,7 +49,16 @@
                 "highlight2": "tools",
                 "part3": "I leverage in my projects:"
             },
-            "stackTitle": "My technology stack"
+            "stackTitle": "My technology stack",
+            "filters": {
+                "all": "All",
+                "frontend": "Frontend",
+                "backend": "Backend",
+                "testing": "Testing",
+                "tools": "Tools",
+                "database": "Database",
+                "devops": "DevOps"
+            }
         },
         "experience": {
             "title": "Experience",

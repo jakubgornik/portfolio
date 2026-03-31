@@ -46,29 +46,41 @@ export enum SectionName {
   Contact = "Contact",
 }
 
-export const technologiesAndTools = [
-  "Javascript",
-  "Typescript",
-  "React.js",
-  "Next.js",
-  "Node.js",
-  "Nest.js",
-  "Express.js",
-  "TailwindCSS",
-  "MaterialUI",
-  "HTML",
-  "Git",
-  "CSS",
-  "Firebase",
-  "Supabase",
-  "AWS",
-  "MongoDB",
-  "Prisma",
-  "Docker",
-  "Playwright",
-  "Vitest",
-  "Jest",
-] as const;
+export const technologiesAndToolsGrouped = {
+  backend: ["Node.js", "Nest.js", "Express.js", "REST", "GraphQL", "JWT"],
+  frontend: [
+    "Javascript",
+    "Typescript",
+    "React.js",
+    "Next.js",
+    "TailwindCSS",
+    "MaterialUI",
+    "shadcn",
+    "HTML",
+    "CSS",
+  ],
+  testing: ["Playwright", "Vitest", "Jest", "React Testing Library"],
+  tools: ["Git", "Vite", "Turborepo", "Figma", "Postman"],
+  database: ["PostgreSQL", "Prisma", "Supabase", "Firebase"],
+  devops: ["AWS", "Docker", "Vercel"],
+} as const;
+
+export type TechnologyCategory = keyof typeof technologiesAndToolsGrouped;
+export enum TechnologyFilterName {
+  All = "all",
+}
+
+export type TechnologyFilterOption =
+  | TechnologyCategory
+  | TechnologyFilterName.All;
+
+export const technologyCategories = Object.keys(
+  technologiesAndToolsGrouped,
+) as TechnologyCategory[];
+
+export const technologiesAndTools = Object.values(
+  technologiesAndToolsGrouped,
+).flat();
 
 export const experienceCards: CardData[] = [
   {

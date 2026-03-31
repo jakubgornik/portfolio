@@ -43,7 +43,16 @@
                 "highlight2": "narzędzia",
                 "part3": "z których korzystam w swoich projektach:"
             },
-            "stackTitle": "Technologie, z którymi pracuję"
+            "stackTitle": "Technologie, z którymi pracuję",
+            "filters": {
+                "all": "Wszystko",
+                "frontend": "Frontend",
+                "backend": "Backend",
+                "testing": "Testing",
+                "tools": "Tools",
+                "database": "Database",
+                "devops": "DevOps"
+            }
         },
         "experience": {
             "title": "Doświadczenie",
