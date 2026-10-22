@@ -6,6 +6,86 @@ html {
   background-color: #141414;
 }
 
+@media (min-width: 1024px) and (min-height: 640px) and (prefers-reduced-motion: no-preference) {
+  .projects-section {
+    scroll-margin-top: 0;
+  }
+
+  .projects-section .projects-sticky {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 100svh;
+    flex-direction: column;
+  }
+
+  .projects-section .projects-heading {
+    flex-shrink: 0;
+    padding-top: clamp(7rem, 14svh, 10rem);
+    padding-bottom: clamp(1rem, 2svh, 2rem);
+  }
+
+  .projects-section .projects-viewport {
+    display: flex;
+    min-height: 0;
+    flex: 1;
+    align-items: center;
+    overflow: clip;
+  }
+
+  .projects-section .projects-track {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(3rem, 6vw, 6rem);
+    padding-block: 1rem;
+    will-change: transform;
+  }
+
+  .projects-section .projects-card {
+    min-width: 0;
+    flex: 0 0 100%;
+    align-items: center;
+  }
+
+  .projects-section .projects-preview {
+    width: 100%;
+    max-height: min(52svh, 35rem);
+    object-fit: contain;
+    object-position: left center;
+  }
+
+  .projects-section .projects-details {
+    padding-top: 0;
+  }
+
+  .projects-section .projects-copy {
+    padding: clamp(0.75rem, 2svh, 1.5rem);
+  }
+
+  .projects-section .projects-title {
+    font-size: clamp(22px, 2.8svh, 26px);
+  }
+
+  .projects-section .projects-subtitle {
+    font-size: clamp(18px, 2.5svh, 22px);
+  }
+
+  .projects-section .projects-description {
+    font-size: clamp(14px, 1.8svh, 16px);
+  }
+
+  .projects-section .projects-technologies {
+    flex-wrap: wrap;
+  }
+
+  .projects-section .projects-controls {
+    display: flex;
+    flex-shrink: 0;
+    padding-block: 1rem;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

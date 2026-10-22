@@ -7,6 +7,7 @@ import { StaticImageData } from "next/image";
 import TechnologyCard from "./technology-card";
 
 interface ProjectPresentationProps {
+  index: number;
   technologies?: string[];
   description?: string[];
   githubUrl: string;
@@ -16,6 +17,7 @@ interface ProjectPresentationProps {
 }
 
 export const ProjectPresentation = ({
+  index,
   technologies,
   description,
   githubUrl,
@@ -25,32 +27,35 @@ export const ProjectPresentation = ({
 }: ProjectPresentationProps) => {
   return (
     <>
-      <li className="hidden grid-cols-6 md:grid">
+      <li
+        data-project-index={index}
+        className="projects-card hidden grid-cols-6 md:grid"
+      >
         <Image
           src={img}
           alt={alt}
-          className="col-[1/5] row-[1/2] rounded-[3px]"
+          className="projects-preview col-[1/5] row-[1/2] rounded-[3px]"
         />
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="col-[3/-1] row-[1/2] pt-8"
+          className="projects-details col-[3/-1] row-[1/2] pt-8"
         >
-          <div className="flex flex-col rounded-[3px] bg-dark p-3 shadow-lg xl:p-6">
-            <span className="text-[22px] text-lightGray xl:text-[26px]">
+          <div className="projects-copy flex flex-col rounded-[3px] bg-dark p-3 shadow-lg xl:p-6">
+            <span className="projects-title text-[22px] text-lightGray xl:text-[26px]">
               {description?.[0]}
             </span>
-            <span className="text-[18px] text-yellowishWhite xl:text-[22px]">
+            <span className="projects-subtitle text-[18px] text-yellowishWhite xl:text-[22px]">
               {description?.[1]}
             </span>
-            <div className="mt-1 text-[14px] text-yellowishWhite xl:text-[16px]">
+            <div className="projects-description mt-1 text-[14px] text-yellowishWhite xl:text-[16px]">
               {description?.[2]}
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <ul className="flex justify-end gap-2 pt-3 text-[14px]">
+            <ul className="projects-technologies flex justify-end gap-2 pt-3 text-[14px]">
               {technologies?.map((title, index) => (
                 <TechnologyCard
                   key={index}

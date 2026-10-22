@@ -82,6 +82,7 @@
         },
         "projects": {
             "title": "Projects",
+            "viewProject": "View {{project}}",
             "logi": {
                 "title": "Logi",
                 "subtitle": "Logistics management system",
