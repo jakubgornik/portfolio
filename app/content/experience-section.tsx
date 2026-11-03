@@ -1,6 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+  type MotionValue,
+} from "framer-motion";
 import TechnologyCard from "../components/technology-card";
 import { useTranslation } from "react-i18next";
 import { experienceCards, SectionName } from "../utils/data";
@@ -88,28 +95,55 @@ const TechStack = ({ card }: CardProp) => {
 
 interface ExperienceCardItemProps extends CardProp {
   index: number;
+  progress: MotionValue<number>;
+  layout: { height: number; cardHeight: number; step: number };
+  reducedMotion: boolean;
 }
 
-const ExperienceCardItem = ({ card, index }: ExperienceCardItemProps) => {
+const ExperienceCardItem = ({
+  card,
+  index,
+  progress,
+  layout,
+  reducedMotion,
+}: ExperienceCardItemProps) => {
+  // Start receding when the next card reaches this card's bottom edge,
+  // and finish when it reaches the shared sticky position.
+  const overlapStart =
+    ((index + 1) * layout.step - layout.cardHeight) / layout.height;
+  const overlapEnd = ((index + 1) * layout.step) / layout.height;
+  const scale = useTransform(progress, [overlapStart, overlapEnd], [1, 0.96]);
+  const dimming = useTransform(progress, [overlapStart, overlapEnd], [0, 0.22]);
+  const canRecede = !reducedMotion && index < experienceCards.length - 1;
+
   return (
     <div
       className="sticky top-[100px] z-[var(--index)] lg:top-[120px]"
       style={{ "--index": index } as React.CSSProperties}
     >
       <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-        variants={cardVariants}
-        style={{ backgroundColor: card.bg }}
-        className="flex h-[540px] flex-col overflow-hidden rounded-lg bg-dark md:h-[600px] md:flex-row"
+        style={{ scale: canRecede ? scale : 1, transformOrigin: "center top" }}
       >
-        <div className="h-full w-full md:w-[55%] lg:w-1/2">
-          <CardContent card={card} />
-        </div>
-        <div className="hidden h-full w-full border-t border-white/5 md:flex md:w-[45%] md:border-l md:border-t-0 lg:w-1/2">
-          <TechStack card={card} />
-        </div>
+        <motion.div
+          initial={reducedMotion ? false : "hidden"}
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={cardVariants}
+          style={{ backgroundColor: card.bg }}
+          className="relative flex h-[540px] flex-col overflow-hidden rounded-lg bg-dark md:h-[600px] md:flex-row"
+        >
+          <div className="h-full w-full md:w-[55%] lg:w-1/2">
+            <CardContent card={card} />
+          </div>
+          <div className="hidden h-full w-full border-t border-white/5 md:flex md:w-[45%] md:border-l md:border-t-0 lg:w-1/2">
+            <TechStack card={card} />
+          </div>
+          <motion.div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 rounded-[inherit] bg-black"
+            style={{ opacity: canRecede ? dimming : 0 }}
+          />
+        </motion.div>
       </motion.div>
     </div>
   );
@@ -120,6 +154,41 @@ export const ExperienceSection = () => {
     keyPrefix: "sections.experience",
   });
   const { ref } = useSectionInView(SectionName.Experience);
+  const stackRef = useRef<HTMLDivElement>(null);
+  const reducedMotion = useReducedMotion() === true;
+  const [layout, setLayout] = useState({
+    height: 1,
+    cardHeight: 1,
+    step: 1,
+    stickyTop: 100,
+  });
+  const { scrollYProgress } = useScroll({
+    target: stackRef,
+    offset: [`start ${layout.stickyTop}px`, `end ${layout.stickyTop}px`],
+  });
+
+  useEffect(() => {
+    const stack = stackRef.current;
+    const firstCard = stack?.firstElementChild;
+    if (!stack || !(firstCard instanceof HTMLElement)) return;
+
+    const measure = () => {
+      const cardHeight = firstCard.offsetHeight;
+      const gap = parseFloat(getComputedStyle(stack).rowGap) || 0;
+      setLayout({
+        height: Math.max(1, stack.offsetHeight),
+        cardHeight,
+        step: cardHeight + gap,
+        stickyTop: parseFloat(getComputedStyle(firstCard).top) || 0,
+      });
+    };
+    const observer = new ResizeObserver(measure);
+    observer.observe(stack);
+    observer.observe(firstCard);
+    measure();
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section ref={ref} className="relative py-8 md:py-16" id="experience">
@@ -127,9 +196,16 @@ export const ExperienceSection = () => {
         <SectionHeader index="03" title={t("title")} />
       </div>
       <div className="mx-auto max-w-7xl px-5 md:px-10">
-        <div className="relative flex flex-col gap-6 md:gap-8">
+        <div ref={stackRef} className="relative flex flex-col gap-6 md:gap-8">
           {experienceCards.map((card, index) => (
-            <ExperienceCardItem key={card.id} card={card} index={index} />
+            <ExperienceCardItem
+              key={card.id}
+              card={card}
+              index={index}
+              progress={scrollYProgress}
+              layout={layout}
+              reducedMotion={reducedMotion}
+            />
           ))}
         </div>
       </div>

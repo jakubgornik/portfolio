@@ -6,6 +6,95 @@ html {
   background-color: #141414;
 }
 
+.hero-greeting {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  letter-spacing: 0.04em;
+}
+
+.hero-greeting::before {
+  content: "";
+  width: 1.5rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+.hero-name {
+  margin-block: 1.25rem 1.5rem;
+  font-size: clamp(2.375rem, 7.6vw, 7.5rem);
+  letter-spacing: -0.045em;
+}
+
+.hero-role {
+  max-width: 30rem;
+  font-size: clamp(1.125rem, 2.3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+}
+
+.hero-name-mask {
+  display: inline-block;
+  overflow: hidden;
+  padding-block: 0.12em;
+  margin-block: -0.12em;
+  vertical-align: bottom;
+}
+
+.hero-name-word {
+  display: inline-block;
+  transform-origin: left bottom;
+}
+
+@media (max-width: 767px) {
+  .hero-name {
+    margin-block: 1rem 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-greeting,
+  .hero-role {
+    animation: hero-copy-enter 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .hero-greeting {
+    animation-delay: 0.1s;
+  }
+
+  .hero-name-word {
+    animation: hero-name-enter 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: calc(0.24s + var(--word-index) * 0.12s);
+  }
+
+  .hero-role {
+    animation-delay: 0.68s;
+  }
+}
+
+@keyframes hero-copy-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-name-enter {
+  from {
+    transform: translateY(120%) rotate(3deg);
+  }
+  to {
+    transform: translateY(0) rotate(0);
+  }
+}
+
 @media (min-width: 1024px) and (min-height: 640px) and (prefers-reduced-motion: no-preference) {
   .projects-section {
     scroll-margin-top: 0;
@@ -148,12 +237,6 @@ html.lenis body {
 .lenis.lenis-smooth {
   scroll-behavior: auto !important;
 }
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
 .lenis.lenis-stopped {
   overflow: hidden;
-}
-.lenis.lenis-scrolling iframe {
-  pointer-events: none;
 }
